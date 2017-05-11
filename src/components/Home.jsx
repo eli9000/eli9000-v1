@@ -38,7 +38,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
-				<h1>Welcome poor fool!</h1>
+				<h1>Welcome Internet Traveler!</h1>
 				<div>
 					<a onClick={this.onClick}>
 						<button>Click to Begin</button>

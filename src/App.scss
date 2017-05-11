@@ -1,0 +1,62 @@
+@import "./stylesheets/_variables.scss";
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+.App {
+  margin: 0;
+	padding: 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Header {
+	padding: 10px 20px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	color: white;
+	background-color: #001c55;
+	box-shadow: 10px 4px 5px gray;
+	z-index: 1;
+}
+
+.Header > h1 {
+
+}
+
+.Home {
+	text-align: center;
+	color: #222222;
+  width: 100%;
+	height: 800px;
+	margin: 0px;
+	padding-top: 300px;
+  background: linear-gradient(#fff, #001c55);
+}
+
+.Home button {
+	color: white;
+	height: 40px;
+	width: 120px;
+	margin-top: 20px;
+	background-color: #001c55;
+	border: 2px solid black;
+	border-radius: 10px;
+	// box-shadow: 5px 5px 5px gray;
+}
+
+.Home button:hover {
+	box-shadow: none;
+	cursor: pointer;
+	background-color: gray;
+}
+
+.Home .dialog {
+	background-color: white;
+	padding: 2em;
+}

@@ -1,0 +1,76 @@
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+
+
+// ******************************** Text
+$font-family:						"Times New Roman", Times, serif; // official US Congress font
+$font-light:						300;
+$font-weight:						400; // (reset)
+$font-medium:						500;
+$font-bold:							700;
+
+$font-size:							14pt; // (reset)
+$text-large:						40px;
+$text-huge:							60px;
+
+$font-constitution:			"US Constitution", Times, serif;
+
+
+// ******************************** Colors:
+$primary: 							#1ea3d4;
+$secondary: 						#cc3232;
+$tertiary:	 						#f4d44d;
+$base:									#14141e;
+$gray: 									#878787;
+
+// ******************************** Colors: Text
+$color:									$base; // (reset)
+
+
+// ******************************** Colors: Borders
+$border-color:					#979797;
+$border-gray-solid:			#aaaab4;
+$border-gray: 					transparentize($border-gray-solid, 0.6);
+$border-dark:						$base;
+
+// ******************************* Colors: Reference
+$white:									#ffffff;
+$light-gray:   		      #ededf0;
+$black:									$base;
+
+
+// ******************************** Borders
+$border:								1px solid $border-color;
+$border-small:          1px;
+$border-medium:         2px;
+
+$border-radius:         3px;
+$border-radius-small:   2px;
+$border-radius-medium:  4px;
+$border-radius-large:   6px;
+$border-radius-xlarge:  10px;
+
+
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+
+@mixin transition($speed) {
+  -webkit-transition: $speed ease;
+     -moz-transition: $speed ease;
+      -ms-transition: $speed ease;
+          transition: $speed ease;
+}
+
+@mixin gradient-bg {
+  background: #FFF;
+  background: -moz-linear-gradient(top,  #FFF 0%, $primary 100%);
+  background: -webkit-linear-gradient(top,  #FFF 0%,$primary 100%);
+  background: linear-gradient(to bottom,  #FFF 0%,$primary 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='$primary',GradientType=0 );
+}
+
+@mixin dev-border {
+	border: 1px solid red;
+}
