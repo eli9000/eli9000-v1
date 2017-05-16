@@ -1,4 +1,5 @@
 @import "./stylesheets/_variables.scss";
+@import "./stylesheets/giffy.scss";
 
 h1, h2, h3 {
 	margin: 0;
@@ -33,9 +34,10 @@ h1, h2, h3 {
 	text-align: center;
 	color: #222222;
   width: 100%;
-	height: 800px;
+	height: auto;
 	margin: 0px;
 	padding-top: 300px;
+	padding-bottom: 50px;
   background: linear-gradient(#fff, #001c55);
 }
 
@@ -45,7 +47,7 @@ h1, h2, h3 {
 	width: 120px;
 	margin-top: 20px;
 	background-color: #001c55;
-	border: 2px solid black;
+	border: 2px solid #aaa;
 	border-radius: 10px;
 	// box-shadow: 5px 5px 5px gray;
 }

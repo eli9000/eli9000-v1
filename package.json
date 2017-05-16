@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"build-css": "node-sass src/ -o src/",
-		"watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+		"build-css": "node-sass src/stylesheets -o src/",
+		"watch-css": "npm run build-css && node-sass src/stylesheets -o src/ --watch --recursive",
 		"start-js": "react-scripts start",
 		"start:server": "node api",
 		"start": "npm-run-all -p watch-css start-js start:server",
@@ -17,6 +17,8 @@
 		"extends": "react-app"
 	},
 	"dependencies": {
+		"axios": "^0.16.1",
+		"lodash": "^4.17.4",
 		"react": "^15.5.4",
 		"react-dom": "^15.5.4"
 	},
