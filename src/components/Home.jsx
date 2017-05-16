@@ -11,12 +11,12 @@ class Home extends Component {
 	constructor() {
 		super();
 
-		this.onClick = this._toggleDialog.bind(this);
+		this.onClick = this.toggleDialog.bind(this);
 
 		this.state = { show: false };
 	}
 
-	_toggleDialog() {
+	toggleDialog() {
 		// Old Way
 		// this.setState({ show: !this.state.show });
 
@@ -39,16 +39,23 @@ class Home extends Component {
 		return (
 			<div className="Home">
 				<h1>Welcome Internet Traveler!</h1>
-				<div>
-					<a onClick={this.onClick}>
-						<button>Click to Begin</button>
-					</a>
-				</div>
-				{this.state.show &&
-					<div className="dialog">
-						<h1>My Dialog</h1>
+
+				{!this.state.show &&
+					<div className="initButton">
+						<a onClick={this.onClick}>
+							<button>Click to Begin</button>
+						</a>
 					</div>
 				}
+
+				{this.state.show &&
+					<div className="dialog">
+						<a onClick={this.onClick}>
+							<button>Haha Missed Me!</button>
+						</a>
+					</div>
+				}
+
 			</div>
 		);
 	}

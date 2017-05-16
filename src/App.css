@@ -4,17 +4,6 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
-h1, h2, h3 {
-  margin: 0; }
-
-.App {
-  margin: 0;
-  padding: 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
 .Header {
   padding: 10px 20px;
   position: fixed;
@@ -33,8 +22,7 @@ h1, h2, h3 {
   height: auto;
   margin: 0px;
   padding-top: 300px;
-  padding-bottom: 50px;
-  background: linear-gradient(#fff, #001c55); }
+  padding-bottom: 50px; }
 
 .Home button {
   color: white;
@@ -51,5 +39,37 @@ h1, h2, h3 {
   background-color: gray; }
 
 .Home .dialog {
-  background-color: white;
-  padding: 2em; }
+  background-color: transparent;
+  padding: 2em;
+  position: fixed;
+  top: 2em;
+  right: 1em;
+  width: 25%;
+  height: 25%; }
+
+.Giffy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red; }
+
+.Giffy .gif {
+  align-self: center;
+  text-align: center; }
+
+.Starwars {
+  width: 50%;
+  background-color: blue; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+.App {
+  margin: 0;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff, #001c55); }

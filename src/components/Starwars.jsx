@@ -22,7 +22,7 @@ export default class Starwars extends Component {
 		// const bigData = this.state.results;
 
 		return (
-			<div className="starwars">
+			<div className="Starwars">
 				<button onClick={this.getFact}>
 					Click Me
 				</button>

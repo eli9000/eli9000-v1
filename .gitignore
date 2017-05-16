@@ -3,6 +3,7 @@
 # generated CSS files
  src/**/*.css
  !src/index.css
+ .sass-cache
 
 # dependencies
 /node_modules

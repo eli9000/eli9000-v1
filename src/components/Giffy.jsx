@@ -6,7 +6,7 @@ import Axios from 'axios';
 // import { debounce } from 'lodash';
 
 // CSS
-import '../stylesheets/giffy.scss';
+
 
 class Giffy extends Component {
 	constructor() {
@@ -42,14 +42,14 @@ class Giffy extends Component {
 
 	render() {
 		return (
-			<div className="giffy">
+			<div className="Giffy">
 				<h2>Giffy Experiment</h2>
 				<input type="text" onChange={this.getGif} />
 				<div className="gif">
 					{!this.state.loading && !!this.state.data.length &&
 						this.state.data.map(({ id, images }) =>
-							<div>
-								<img key={id} src={images.original.url} />
+							<div key={id}>
+								<img src={images.original.url} />
 							</div>
 						)}
 				</div>
