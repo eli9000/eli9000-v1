@@ -4,17 +4,6 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
-h1, h2, h3 {
-  margin: 0; }
-
-.App {
-  margin: 0;
-  padding: 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
 .Header {
   padding: 10px 20px;
   position: fixed;
@@ -30,10 +19,10 @@ h1, h2, h3 {
   text-align: center;
   color: #222222;
   width: 100%;
-  height: 800px;
+  height: auto;
   margin: 0px;
   padding-top: 300px;
-  background: linear-gradient(#fff, #001c55); }
+  padding-bottom: 50px; }
 
 .Home button {
   color: white;
@@ -41,7 +30,7 @@ h1, h2, h3 {
   width: 120px;
   margin-top: 20px;
   background-color: #001c55;
-  border: 2px solid black;
+  border: 2px solid #aaa;
   border-radius: 10px; }
 
 .Home button:hover {
@@ -50,5 +39,36 @@ h1, h2, h3 {
   background-color: gray; }
 
 .Home .dialog {
-  background-color: white;
-  padding: 2em; }
+  background-color: red;
+  padding: 2em;
+  position: fixed;
+  top: 2em;
+  right: 1em;
+  width: 25%;
+  height: 25%; }
+
+.Giffy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red; }
+  .Giffy .gif {
+    align-self: center;
+    text-align: center; }
+
+.Starwars {
+  width: 50%;
+  background-color: blue; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+.App {
+  margin: 0;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff, #001c55); }

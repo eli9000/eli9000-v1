@@ -1,0 +1,13 @@
+
+.Giffy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+
+	.gif {
+		align-self: center;
+		text-align: center;
+	}
+}

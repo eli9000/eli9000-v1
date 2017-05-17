@@ -1,0 +1,39 @@
+.Home {
+	text-align: center;
+	color: #222222;
+  width: 100%;
+	height: auto;
+	margin: 0px;
+	padding-top: 300px;
+	padding-bottom: 50px;
+  // background: linear-gradient(#fff, #001c55);
+}
+
+.Home button {
+	color: white;
+	height: 40px;
+	width: 120px;
+	margin-top: 20px;
+	background-color: #001c55;
+	border: 2px solid #aaa;
+	border-radius: 10px;
+	// box-shadow: 5px 5px 5px gray;
+}
+
+.Home button:hover {
+	box-shadow: none;
+	cursor: pointer;
+	background-color: gray;
+}
+
+.Home .dialog {
+	background-color: red;
+	padding: 2em;
+	position: fixed;
+	top: 2em;
+	right: 1em;
+	$width: 50%;
+	width: $width/2;
+	$height: 50%;
+	height: $height/2;
+}
