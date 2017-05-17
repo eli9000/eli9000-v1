@@ -39,7 +39,7 @@
   background-color: gray; }
 
 .Home .dialog {
-  background-color: transparent;
+  background-color: red;
   padding: 2em;
   position: fixed;
   top: 2em;
@@ -53,10 +53,9 @@
   justify-content: center;
   align-items: center;
   background-color: red; }
-
-.Giffy .gif {
-  align-self: center;
-  text-align: center; }
+  .Giffy .gif {
+    align-self: center;
+    text-align: center; }
 
 .Starwars {
   width: 50%;

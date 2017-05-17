@@ -4,6 +4,9 @@
 //Libs
 import React, { Component } from 'react';
 
+//Components
+import Giffy from './Giffy.jsx';
+
 //CSS Styles
 
 //Home Component Code
@@ -53,6 +56,8 @@ class Home extends Component {
 						<a onClick={this.onClick}>
 							<button>Haha Missed Me!</button>
 						</a>
+
+						<Giffy />
 					</div>
 				}
 
