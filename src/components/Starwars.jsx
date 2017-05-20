@@ -29,8 +29,8 @@ export default class Starwars extends Component {
 				<ul>
 					{/*{!this.state.loading && !!this.state.results.length &&
 						this.state.results.map(())}*/}
-					{!this.state.loading && !!this.state.data.length && this.state.data.map(({ name }) =>
-						<li key={name}>{name}</li>
+					{!this.state.loading && !!this.state.data.length && this.state.data.map(({ name, birth_year }) =>
+						<li key={name}>Name: {name}<br />Born: {birth_year}</li>
 					)}
 				</ul>
 

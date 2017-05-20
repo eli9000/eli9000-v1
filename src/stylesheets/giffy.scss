@@ -10,4 +10,14 @@
 		align-self: center;
 		text-align: center;
 	}
+	#gifDiv {
+		height: 200px;
+		width: 200px;
+		border-bottom: 2px solid;
+	}
+}
+
+#gifDiv > img {
+	height: 195px;
+	width: 195px;
 }

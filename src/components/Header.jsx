@@ -11,11 +11,19 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="Header">
-				<h1>
-					<code>
-						eli9000.com
+				<div className="logo">
+					<h1>
+						<code>
+							eli9000.com
 					</code>
-				</h1>
+					</h1>
+				</div>
+				<div className="menu">
+					<ul>
+						<li>Link1</li>
+						<li>Link2</li>
+					</ul>
+				</div>
 			</div>
 		);
 	}

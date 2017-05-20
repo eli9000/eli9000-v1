@@ -31,13 +31,13 @@ class Giffy extends Component {
 
 	handleChange(event) {
 		this.setState({ value: event.target.value });
-		console.log({ value: event.target.value });
+		// console.log({ value: event.target.value });
 	}
 
 	handleSubmit(event) {
-		this.getGif({ value: this.state.value });
+		// this.getGif({ value: this.state.value });
 		// const value = this.state.value;
-		console.log({ value: this.state.value });
+		// console.log({ value: this.state.value });
 		event.preventDefault();
 	}
 
@@ -73,7 +73,7 @@ class Giffy extends Component {
 				<div className="gif">
 					{!this.state.loading && !!this.state.data.length &&
 						this.state.data.map(({ id, images }) =>
-							<div key={id}>
+							<div key={id} id="gifDiv">
 								<img src={images.original.url} />
 							</div>
 						)}

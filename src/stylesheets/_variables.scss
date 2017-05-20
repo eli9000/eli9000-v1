@@ -18,7 +18,7 @@ $font-constitution:			"US Constitution", Times, serif;
 
 
 // ******************************** Colors:
-$primary: 							#1ea3d4;
+$primary: 							#001c55;
 $secondary: 						#cc3232;
 $tertiary:	 						#f4d44d;
 $base:									#14141e;
@@ -71,6 +71,9 @@ $border-radius-xlarge:  10px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='$primary',GradientType=0 );
 }
 
-@mixin dev-border {
-	border: 1px solid red;
+@mixin flexbox-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
 }

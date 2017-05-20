@@ -12,6 +12,7 @@ import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
 import Giffy from './components/Giffy.jsx';
 import Starwars from './components/Starwars.jsx';
+import Footer from './components/Footer.jsx';
 
 
 //App Component Code
@@ -23,6 +24,7 @@ class App extends Component {
 				<Home />
 				<Giffy />
 				<Starwars />
+				<Footer />
 			</div>
 		);
 	}

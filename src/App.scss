@@ -4,18 +4,19 @@
 @import "./stylesheets/home.scss";
 @import "./stylesheets/giffy.scss";
 @import "./stylesheets/starwars.scss";
-
+@import "./stylesheets/footer.scss";
 
 h1, h2, h3 {
 	margin: 0;
 }
 
 .App {
-  margin: 0;
+	height: 1000px;
+  margin: 0 20px;
 	padding: 0px 0px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(#fff, #001c55);
+	justify-content: space-between;
+	align-items: flex-start;
+	background: linear-gradient(#fff, $primary);
 }

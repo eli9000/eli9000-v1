@@ -13,7 +13,17 @@
   color: white;
   background-color: #001c55;
   box-shadow: 10px 4px 5px gray;
-  z-index: 1; }
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start; }
+
+.Header .menu {
+  margin-left: auto; }
+
+.Header .menu li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px 10px; }
 
 .Home {
   text-align: center;
@@ -33,7 +43,7 @@
   border: 2px solid #aaa;
   border-radius: 10px; }
 
-.Home button:hover {
+.Home button button:hover {
   box-shadow: none;
   cursor: pointer;
   background-color: gray; }
@@ -53,22 +63,50 @@
   justify-content: center;
   align-items: center;
   background-color: red; }
-  .Giffy .gif {
-    align-self: center;
-    text-align: center; }
+
+.Giffy .gif {
+  align-self: center;
+  text-align: center; }
+
+.Giffy #gifDiv {
+  height: 200px;
+  width: 200px;
+  border-bottom: 2px solid; }
+
+#gifDiv > img {
+  height: 195px;
+  width: 195px; }
 
 .Starwars {
   width: 50%;
   background-color: blue; }
 
+.Footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: #001c55;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.Footer .links ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none; }
+
 h1, h2, h3 {
   margin: 0; }
 
 .App {
-  margin: 0;
+  height: 1000px;
+  margin: 0 20px;
   padding: 0px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   background: linear-gradient(#fff, #001c55); }
