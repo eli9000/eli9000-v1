@@ -1,18 +1,27 @@
+@import './_variables';
+
 .Footer {
-	position: fixed;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
+	// position: fixed;
+	// bottom: 0px;
+	// right: 0px;
+	// left: 0px;
+	width: 100%;
 	background-color: $primary;
 	color: white;
-	display: flex;
-	justify-content: center;
-	align-content: center;
+	// box-shadow: 10px 4px 5px gray;
+	// display: flex;
+	// justify-content: center;
+	// align-content: center;
 
 	.links ul {
+		// margin: 0 auto;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+		align-content: space-around;
 		list-style-type: none;
+
+		li {
+			align-items: center;
+		}
 	}
 }

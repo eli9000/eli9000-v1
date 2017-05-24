@@ -22,8 +22,10 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<Home />
-				<Giffy />
-				<Starwars />
+				<div className="api-test">
+					<Giffy />
+					<Starwars />
+				</div>
 				<Footer />
 			</div>
 		);

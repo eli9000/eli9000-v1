@@ -10,13 +10,23 @@ h1, h2, h3 {
 	margin: 0;
 }
 
+ul {
+	margin-left: 0;
+}
+
 .App {
-	height: 1000px;
+	height: 900px;
   margin: 0 20px;
 	padding: 0px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 	background: linear-gradient(#fff, $primary);
+
+	.api-test {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
 }

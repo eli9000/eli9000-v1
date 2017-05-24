@@ -23,7 +23,7 @@ class Giffy extends Component {
 		// });
 
 		this.state = {
-			data: [],
+			data: {},
 			loading: true,
 			value: '',
 		};
@@ -66,7 +66,7 @@ class Giffy extends Component {
 						Search: <input type="text" value={this.state.value} onChange={this.handleChange} />
 					</label>
 					<input type="submit" value="Submit" onClick={this.getGif} />
-				</form>
+				</form><br />
 
 
 				{/*<input type="text" onSubmit={this.getGif} />*/}
@@ -90,7 +90,7 @@ class Giffy extends Component {
 		Axios.get(endpoint, {
 			params: {
 				q: search,
-				limit: 3,
+				limit: 1,
 				api_key: 'dc6zaTOxFJmzC'
 			}
 		})

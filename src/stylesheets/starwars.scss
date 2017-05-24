@@ -1,5 +1,20 @@
 .Starwars {
-	$width: 100%;
-	width: $width/2;
-	background-color: blue;
+	color: white;
+	width: auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+
+	.button {
+		align-self: center;
+		width: auto;
+
+	}
+
+	li {
+		align-self: flex-start;
+		list-style-type: circle;
+
+	}
 }

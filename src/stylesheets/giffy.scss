@@ -4,7 +4,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
 
 	.gif {
 		align-self: center;
@@ -13,11 +12,14 @@
 	#gifDiv {
 		height: 200px;
 		width: 200px;
-		border-bottom: 2px solid;
+		border: 2px solid;
+
+	img {
+		padding-top: 5px;
+		height: 190px;
+		width: 190px;
+		}
 	}
 }
 
-#gifDiv > img {
-	height: 195px;
-	width: 195px;
-}
+
