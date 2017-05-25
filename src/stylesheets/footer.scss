@@ -3,7 +3,9 @@
 .Footer {
 	width: 100%;
 	background-color: $footer;
-	border-top: 2px solid gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	// box-shadow: -10px -4px 5px gray;
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -11,46 +13,70 @@
 	.copyright {
 		// margin-right: auto;
 		// margin-left: 50px;
+		color: $footer-font;
+		padding-left: 2em;
+		width: 60%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-around;
 		align-content: center;
 
-		.text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-content: space-around;
-			color: #ddd928;
+		// .text {
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: space-around;
+			// align-content: center;
+			// color: $footer-font;
 
-			h4 {
+			h2 {
 				letter-spacing: 4px;
 				// font-style: $font-light;
 			}
-		}	code {
-			font-size: 1.1em;
+			p {
+				margin: 0;
+				font-size: 0.7em;
+				letter-spacing: 2px;
 		}
 	}
 
-	.links ul {
-		// margin-right: 20px;
-		display: flex;
-		justify-content: space-around;
-		align-content: center;
-		list-style-type: none;
+	.links {
+		// margin-left: auto;
+		padding-right: 2em;
+		padding-left: 2em;
+		width: 40%;
+		border-left: 2px solid gray;
 
-		li {
-			align-items: center;
-			padding-right: 1.1em;
+		ul {
+			padding-left: 0px;
+			display: flex;
+			justify-content: space-around;
+			align-content: center;
+			list-style-type: none;
 
-			img {
-				padding: 4px;
-				height: 25px;
-				width: 25px;
-				border: 1px solid gray;
-				border-radius: 25px;
-				box-shadow: 5px 5px 5px gray;
+			li {
+				align-items: center;
+				// border-left: 1px solid gray;
+
+				a:link, a:visited {
+					// background-color: red;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-content: center;
+					padding: 4px;
+					height: 25px;
+					width: 25px;
+					border: 3px solid $third;
+					border-radius: 25px;
+					box-shadow: 7px 5px 5px $primary;
+				}
+
+				a:hover {
+					box-shadow: 0px 0px 0px $footer;
+					border: 3px solid white;
+				}
 			}
 		}
 	}
 }
+

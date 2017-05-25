@@ -20,8 +20,15 @@ class Header extends Component {
 				</div>
 				<div className="menu">
 					<ul>
-						<li>Link1</li>
-						<li>Link2</li>
+						<li>
+							<a href="#about">ABOUT</a>
+						</li>
+						<li>
+							<a href="#projects">PROJECTS</a>
+						</li>
+						<li>
+							<a href="#contact">CONTACT</a>
+						</li>
 					</ul>
 				</div>
 			</div>

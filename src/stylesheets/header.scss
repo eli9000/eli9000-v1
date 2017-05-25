@@ -1,23 +1,81 @@
+@import './_variables';
+
 .Header {
 	padding: 10px 20px;
 	position: fixed;
 	top: 0px;
 	right: 0px;
 	left: 0px;
-	color: white;
-	background-color: #001c55;
-	box-shadow: 10px 4px 5px gray;
+	color: $footer-font;
+	background-color: $footer;
+	box-shadow: 7px 7px 5px $third;
 	z-index: 1;
 	display: flex;
 	justify-content: flex-start;
 
-	.menu {
-		margin-left: auto;
+	.logo {
+		width: 40%;
 
-		li {
-			list-style-type: none;
-			display: inline-block;
-			padding: 0px 10px;
+		code {
+			font-size: 2em;
+			letter-spacing: 3px;
+			text-shadow: 5px 5px 5px $primary;
+		}
+	}
+
+	.menu {
+		// margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		width: 60%;
+
+		ul {
+			padding-left: 0;
+			margin: 0;
+			display: flex;
+			justify-content: space-around;
+			align-content: center;
+
+			li {
+				// padding-left: 2.5em;
+				list-style-type: none;
+				align-items: stretch;
+
+				a {
+					width: 120px;
+				}
+
+				a:link, a:visited {
+					color: $footer-font;
+					padding: 0.4em 0.9em;
+					background-color: #505050;
+					// width: 150px;
+					// height: 1em;
+					// width: 1.5em;
+					// border-left: 1px solid $third;
+					// border-bottom: 1px solid $third;
+					// border-top: 1px solid $third;
+					border-bottom-left-radius: 10px;
+					// border-top-left-radius: 10px;
+					box-shadow: 5px 5px 3px $primary;
+					text-decoration: none;
+					font-weight: bold;
+					letter-spacing: 2px;
+				}
+
+				a:hover {
+					color: #fff;
+					// text-shadow: 5px 5px $primary;
+					background-color: #444;
+					box-shadow: none;
+					// background-color: #666666;
+					// border: 1px solid #fff;
+					// border-radius: 10px;
+
+				}
+			}
 		}
 	}
 }

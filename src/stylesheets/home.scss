@@ -1,13 +1,14 @@
+@import './_variables';
+
 .Home {
 	text-align: center;
-	color: #222222;
+	color: $primary;
   width: 100%;
 	height: auto;
 	margin: 0px;
 	$padding: 400px;
 	padding-top: $padding/2;
 	padding-bottom: 50px;
-  // background: linear-gradient(#fff, #001c55);
 
 	a button {
 		color: white;

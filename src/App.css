@@ -4,69 +4,125 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
 .Header {
   padding: 10px 20px;
   position: fixed;
   top: 0px;
   right: 0px;
   left: 0px;
-  color: white;
-  background-color: #001c55;
-  box-shadow: 10px 4px 5px gray;
+  color: #CCE2A3;
+  background-color: #444444;
+  box-shadow: 7px 7px 5px #99A1A6;
   z-index: 1;
   display: flex;
   justify-content: flex-start; }
-  .Header .menu {
-    margin-left: auto; }
-    .Header .menu li {
-      list-style-type: none;
-      display: inline-block;
-      padding: 0px 10px; }
 
+.Header .logo {
+  width: 40%; }
+
+.Header .logo code {
+  font-size: 2em;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px 5px #5C5D8D; }
+
+.Header .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 60%; }
+
+.Header .menu ul {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-content: center; }
+
+.Header .menu ul li {
+  list-style-type: none;
+  align-items: stretch; }
+
+.Header .menu ul li a {
+  width: 120px; }
+
+.Header .menu ul li a:link, .Header .menu ul li a:visited {
+  color: #CCE2A3;
+  padding: 0.4em 0.9em;
+  background-color: #505050;
+  border-bottom-left-radius: 10px;
+  box-shadow: 5px 5px 3px #5C5D8D;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.Header .menu ul li a:hover {
+  color: #fff;
+  background-color: #444;
+  box-shadow: none; }
+
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
 .Home {
   text-align: center;
-  color: #222222;
+  color: #5C5D8D;
   width: 100%;
   height: auto;
   margin: 0px;
   padding-top: 200px;
   padding-bottom: 50px; }
-  .Home a button {
-    color: white;
-    height: 40px;
-    width: 120px;
-    margin-top: 20px;
-    background-color: #001c55;
-    border: 2px solid #aaa;
-    border-radius: 10px; }
-    .Home a button button:hover {
-      background-color: pink;
-      box-shadow: 5px 5px 5px gray;
-      cursor: pointer; }
-  .Home .dialog {
-    padding: 2em;
-    position: fixed;
-    top: 2em;
-    right: 1em;
-    width: 25%;
-    height: 25%; }
+
+.Home a button {
+  color: white;
+  height: 40px;
+  width: 120px;
+  margin-top: 20px;
+  background-color: #001c55;
+  border: 2px solid #aaa;
+  border-radius: 10px; }
+
+.Home a button button:hover {
+  background-color: pink;
+  box-shadow: 5px 5px 5px gray;
+  cursor: pointer; }
+
+.Home .dialog {
+  padding: 2em;
+  position: fixed;
+  top: 2em;
+  right: 1em;
+  width: 25%;
+  height: 25%; }
 
 .Giffy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .Giffy .gif {
-    align-self: center;
-    text-align: center; }
-  .Giffy #gifDiv {
-    height: 200px;
-    width: 200px;
-    border: 2px solid; }
-    .Giffy #gifDiv img {
-      padding-top: 5px;
-      height: 190px;
-      width: 190px; }
+
+.Giffy .gif {
+  align-self: center;
+  text-align: center; }
+
+.Giffy #gifDiv {
+  height: 200px;
+  width: 200px;
+  border: 2px solid; }
+
+.Giffy #gifDiv img {
+  padding-top: 5px;
+  height: 190px;
+  width: 190px; }
 
 .Starwars {
   color: white;
@@ -75,12 +131,14 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center; }
-  .Starwars .button {
-    align-self: center;
-    width: auto; }
-  .Starwars li {
-    align-self: flex-start;
-    list-style-type: circle; }
+
+.Starwars .button {
+  align-self: center;
+  width: auto; }
+
+.Starwars li {
+  align-self: flex-start;
+  list-style-type: circle; }
 
 /*******************************************************************************
 																	STYLING
@@ -91,40 +149,60 @@
 .Footer {
   width: 100%;
   background-color: #444444;
-  border-top: 2px solid gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
   align-content: center; }
-  .Footer .copyright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; }
-    .Footer .copyright .text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: space-around;
-      color: #ddd928; }
-      .Footer .copyright .text h4 {
-        letter-spacing: 4px; }
-    .Footer .copyright code {
-      font-size: 1.1em; }
-  .Footer .links ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    list-style-type: none; }
-    .Footer .links ul li {
-      align-items: center;
-      padding-right: 1.1em; }
-      .Footer .links ul li img {
-        padding: 4px;
-        height: 25px;
-        width: 25px;
-        border: 1px solid gray;
-        border-radius: 25px;
-        box-shadow: 5px 5px 5px gray; }
+
+.Footer .copyright {
+  color: #CCE2A3;
+  padding-left: 2em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center; }
+
+.Footer .copyright h2 {
+  letter-spacing: 4px; }
+
+.Footer .copyright p {
+  margin: 0;
+  font-size: 0.7em;
+  letter-spacing: 2px; }
+
+.Footer .links {
+  padding-right: 2em;
+  padding-left: 2em;
+  width: 40%;
+  border-left: 2px solid gray; }
+
+.Footer .links ul {
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  list-style-type: none; }
+
+.Footer .links ul li {
+  align-items: center; }
+
+.Footer .links ul li a:link, .Footer .links ul li a:visited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 4px;
+  height: 25px;
+  width: 25px;
+  border: 3px solid #99A1A6;
+  border-radius: 25px;
+  box-shadow: 7px 5px 5px #5C5D8D; }
+
+.Footer .links ul li a:hover {
+  box-shadow: 0px 0px 0px #444444;
+  border: 3px solid white; }
 
 h1, h2, h3, h4 {
   margin: 0; }
@@ -144,8 +222,9 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #53A2BE; }
-  .App .api-test {
-    width: 100%;
-    display: flex;
-    justify-content: space-around; }
+  background-color: #A8C69F; }
+
+.App .api-test {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
