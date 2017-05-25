@@ -6,7 +6,7 @@
 @import "./stylesheets/starwars.scss";
 @import "./stylesheets/footer.scss";
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	margin: 0;
 }
 
@@ -15,18 +15,24 @@ ul {
 }
 
 .App {
-	height: 900px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 2em;
+	right: 2em;
   margin: 0 20px;
 	padding: 0px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background: linear-gradient(#fff, $primary);
+	// background: linear-gradient(#fff, $primary);
+	background-color: $secondary;
 
 	.api-test {
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+
 	}
 }

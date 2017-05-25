@@ -32,7 +32,7 @@ class Home extends Component {
 
 				{!this.state.show &&
 					<div className="initButton">
-						<a onMouseOver={this.onClick}>
+						<a onClick={this.onClick}>
 							<button>Click to Begin</button>
 						</a>
 					</div>
@@ -40,7 +40,7 @@ class Home extends Component {
 
 				{this.state.show &&
 					<div className="dialog">
-						<a onMouseOver={this.onClick}>
+						<a onClick={this.onClick}>
 							<button>Haha Missed Me!</button>
 						</a>
 					</div>
