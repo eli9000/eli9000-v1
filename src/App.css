@@ -21,10 +21,7 @@
   box-shadow: 7px 7px 5px #99A1A6;
   z-index: 1;
   display: flex;
-  justify-content: flex-start; }
-
-.Header .logo {
-  width: 40%; }
+  justify-content: flex-end; }
 
 .Header .logo code {
   font-size: 2em;
@@ -32,22 +29,65 @@
   text-shadow: 5px 5px 5px #5C5D8D; }
 
 .Header .menu {
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center; }
+
+.Header .menu .menu-icon .menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-content: center;
-  width: 60%; }
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent; }
+
+.Header .menu .menu-icon .menu-button .bar1, .Header .menu .menu-icon .menu-button .bar2, .Header .menu .menu-icon .menu-button .bar3 {
+  width: 40px;
+  height: 5px;
+  background-color: #CCE2A3;
+  margin: 5px 0;
+  box-shadow: 4px 4px 3px #5C5D8D; }
+
+.Header .menu .menu-icon .menu-button:hover .bar1, .Header .menu .menu-icon .menu-button:hover .bar2, .Header .menu .menu-icon .menu-button:hover .bar3 {
+  background-color: #fff;
+  box-shadow: none; }
+
+.Header .menu .menu-icon .menu-button:focus, .Header .menu .menu-icon .menu-button:active {
+  outline: none; }
+
+.Header .menu .menu-dropdown {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  height: 200px;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center; }
+
+.Header .menu .menu-dropdown ul, .Header .menu .menu-dropdown li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-end; }
+
+.Header .menu .menu-dropdown ul li, .Header .menu .menu-dropdown li li {
+  margin-right: 1em; }
 
 .Header .menu ul {
   padding-left: 0;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-content: center; }
 
 .Header .menu ul li {
   list-style-type: none;
-  align-items: stretch; }
+  align-items: center; }
 
 .Header .menu ul li a {
   width: 120px; }
@@ -222,7 +262,7 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #A8C69F; }
+  background-color: #EFF4ED; }
 
 .App .api-test {
   width: 100%;
