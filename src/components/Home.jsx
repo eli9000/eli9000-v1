@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 
 //Components
-import Giffy from './Giffy.jsx';
+// import Giffy from './Giffy.jsx';
 
 //CSS Styles
 
@@ -16,32 +16,19 @@ class Home extends Component {
 
 		this.onClick = this.toggleDialog.bind(this);
 
-		this.state = { show: false };
+		this.state = {
+			show: false,
+		};
 	}
 
 	toggleDialog() {
-		// Old Way
-		// this.setState({ show: !this.state.show });
-
-
-		// Old Way: Expanded
-		// const newState = { show: !this.state.show };
-
-		// this.setState((currentState) => {
-		// 	return {
-		// 		...currentState,
-		// 		...newState,
-		// 	};
-		// });
-
-		// New Prefered Way
 		this.setState(({ show }) => ({ show: !show }));
 	}
 
 	render() {
 		return (
 			<div className="Home">
-				<h1>Welcome Internet Traveler!</h1>
+				<h1>Welcome Visitor!</h1>
 
 				{!this.state.show &&
 					<div className="initButton">
@@ -56,8 +43,6 @@ class Home extends Component {
 						<a onClick={this.onClick}>
 							<button>Haha Missed Me!</button>
 						</a>
-
-						<Giffy />
 					</div>
 				}
 

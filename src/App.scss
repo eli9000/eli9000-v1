@@ -4,18 +4,35 @@
 @import "./stylesheets/home.scss";
 @import "./stylesheets/giffy.scss";
 @import "./stylesheets/starwars.scss";
+@import "./stylesheets/footer.scss";
 
-
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	margin: 0;
 }
 
+ul {
+	margin-left: 0;
+}
+
 .App {
-  margin: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 2em;
+	right: 2em;
+  margin: 0 20px;
 	padding: 0px 0px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	background: linear-gradient(#fff, #001c55);
+	// background: linear-gradient(#fff, $primary);
+	background-color: $secondary;
+
+	.api-test {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+
+	}
 }

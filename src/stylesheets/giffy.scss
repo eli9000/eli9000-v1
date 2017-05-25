@@ -4,10 +4,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
 
 	.gif {
 		align-self: center;
 		text-align: center;
 	}
+	#gifDiv {
+		height: 200px;
+		width: 200px;
+		border: 2px solid;
+
+	img {
+		padding-top: 5px;
+		height: 190px;
+		width: 190px;
+		}
+	}
 }
+
+

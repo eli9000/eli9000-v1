@@ -23,7 +23,7 @@ class Giffy extends Component {
 		// });
 
 		this.state = {
-			data: [],
+			data: {},
 			loading: true,
 			value: '',
 		};
@@ -31,13 +31,13 @@ class Giffy extends Component {
 
 	handleChange(event) {
 		this.setState({ value: event.target.value });
-		console.log({ value: event.target.value });
+		// console.log({ value: event.target.value });
 	}
 
 	handleSubmit(event) {
-		this.getGif({ value: this.state.value });
+		// this.getGif({ value: this.state.value });
 		// const value = this.state.value;
-		console.log({ value: this.state.value });
+		// console.log({ value: this.state.value });
 		event.preventDefault();
 	}
 
@@ -66,14 +66,14 @@ class Giffy extends Component {
 						Search: <input type="text" value={this.state.value} onChange={this.handleChange} />
 					</label>
 					<input type="submit" value="Submit" onClick={this.getGif} />
-				</form>
+				</form><br />
 
 
 				{/*<input type="text" onSubmit={this.getGif} />*/}
 				<div className="gif">
 					{!this.state.loading && !!this.state.data.length &&
 						this.state.data.map(({ id, images }) =>
-							<div key={id}>
+							<div key={id} id="gifDiv">
 								<img src={images.original.url} />
 							</div>
 						)}
@@ -90,7 +90,7 @@ class Giffy extends Component {
 		Axios.get(endpoint, {
 			params: {
 				q: search,
-				limit: 3,
+				limit: 1,
 				api_key: 'dc6zaTOxFJmzC'
 			}
 		})
