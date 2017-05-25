@@ -16,14 +16,12 @@
   z-index: 1;
   display: flex;
   justify-content: flex-start; }
-
-.Header .menu {
-  margin-left: auto; }
-
-.Header .menu li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0px 10px; }
+  .Header .menu {
+    margin-left: auto; }
+    .Header .menu li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 0px 10px; }
 
 .Home {
   text-align: center;
@@ -33,48 +31,42 @@
   margin: 0px;
   padding-top: 200px;
   padding-bottom: 50px; }
-
-.Home a button {
-  color: white;
-  height: 40px;
-  width: 120px;
-  margin-top: 20px;
-  background-color: #001c55;
-  border: 2px solid #aaa;
-  border-radius: 10px; }
-
-.Home a button button:hover {
-  background-color: pink;
-  box-shadow: 5px 5px 5px gray;
-  cursor: pointer; }
-
-.Home .dialog {
-  padding: 2em;
-  position: fixed;
-  top: 2em;
-  right: 1em;
-  width: 25%;
-  height: 25%; }
+  .Home a button {
+    color: white;
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    background-color: #001c55;
+    border: 2px solid #aaa;
+    border-radius: 10px; }
+    .Home a button button:hover {
+      background-color: pink;
+      box-shadow: 5px 5px 5px gray;
+      cursor: pointer; }
+  .Home .dialog {
+    padding: 2em;
+    position: fixed;
+    top: 2em;
+    right: 1em;
+    width: 25%;
+    height: 25%; }
 
 .Giffy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-
-.Giffy .gif {
-  align-self: center;
-  text-align: center; }
-
-.Giffy #gifDiv {
-  height: 200px;
-  width: 200px;
-  border: 2px solid; }
-
-.Giffy #gifDiv img {
-  padding-top: 5px;
-  height: 190px;
-  width: 190px; }
+  .Giffy .gif {
+    align-self: center;
+    text-align: center; }
+  .Giffy #gifDiv {
+    height: 200px;
+    width: 200px;
+    border: 2px solid; }
+    .Giffy #gifDiv img {
+      padding-top: 5px;
+      height: 190px;
+      width: 190px; }
 
 .Starwars {
   color: white;
@@ -83,14 +75,12 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center; }
-
-.Starwars .button {
-  align-self: center;
-  width: auto; }
-
-.Starwars li {
-  align-self: flex-start;
-  list-style-type: circle; }
+  .Starwars .button {
+    align-self: center;
+    width: auto; }
+  .Starwars li {
+    align-self: flex-start;
+    list-style-type: circle; }
 
 /*******************************************************************************
 																	STYLING
@@ -105,43 +95,36 @@
   display: flex;
   justify-content: space-around;
   align-content: center; }
-
-.Footer .copyright {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center; }
-
-.Footer .copyright .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-around;
-  color: #ddd928; }
-
-.Footer .copyright .text h4 {
-  letter-spacing: 4px; }
-
-.Footer .copyright code {
-  font-size: 1.1em; }
-
-.Footer .links ul {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  list-style-type: none; }
-
-.Footer .links ul li {
-  align-items: center;
-  padding-right: 1.1em; }
-
-.Footer .links ul li img {
-  padding: 4px;
-  height: 25px;
-  width: 25px;
-  border: 1px solid gray;
-  border-radius: 25px;
-  box-shadow: 5px 5px 5px gray; }
+  .Footer .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    .Footer .copyright .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-around;
+      color: #ddd928; }
+      .Footer .copyright .text h4 {
+        letter-spacing: 4px; }
+    .Footer .copyright code {
+      font-size: 1.1em; }
+  .Footer .links ul {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    list-style-type: none; }
+    .Footer .links ul li {
+      align-items: center;
+      padding-right: 1.1em; }
+      .Footer .links ul li img {
+        padding: 4px;
+        height: 25px;
+        width: 25px;
+        border: 1px solid gray;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px gray; }
 
 h1, h2, h3, h4 {
   margin: 0; }
@@ -162,8 +145,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   background-color: #53A2BE; }
-
-.App .api-test {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
+  .App .api-test {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
