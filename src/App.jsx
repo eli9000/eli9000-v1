@@ -10,8 +10,8 @@ import './App.css';
 // Components
 import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
-import Giffy from './components/Giffy.jsx';
-import Starwars from './components/Starwars.jsx';
+// import Giffy from './components/Giffy.jsx';
+// import Starwars from './components/Starwars.jsx';
 import Footer from './components/Footer.jsx';
 
 
@@ -22,10 +22,10 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<Home />
-				<div className="api-test">
+				{/*<div className="api-test">
 					<Giffy />
 					<Starwars />
-				</div>
+				</div>*/}
 				<Footer />
 			</div>
 		);

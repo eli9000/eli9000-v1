@@ -5,6 +5,20 @@
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
+	constructor() {
+		super();
+
+		this.tooltip = this.toggleTip.bind(this);
+
+		this.state = {
+			show: false,
+		}
+	}
+
+	toggleTip() {
+		this.setState(({ show }) => ({ show: !show }));
+	}
+
 	render() {
 		return (
 			<div className="Footer">
@@ -15,7 +29,6 @@ export default class Footer extends Component {
 					</p>
 				</div>
 				<div className="links">
-
 					<ul>
 						<li><a href="https://githup.com/eli9000">
 							<img src="/png/git.png" alt="GitHub" />

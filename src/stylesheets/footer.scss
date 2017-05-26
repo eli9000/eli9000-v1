@@ -3,8 +3,7 @@
 .Footer {
 	width: 100%;
 	background-color: $footer;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0px;
 	// box-shadow: -10px -4px 5px gray;
 	display: flex;
 	justify-content: space-around;
@@ -21,21 +20,15 @@
 		justify-content: space-around;
 		align-content: center;
 
-		// .text {
-			// display: flex;
-			// flex-direction: column;
-			// justify-content: space-around;
-			// align-content: center;
-			// color: $footer-font;
-
-			h2 {
-				letter-spacing: 4px;
-				// font-style: $font-light;
-			}
-			p {
-				margin: 0;
-				font-size: 0.7em;
-				letter-spacing: 2px;
+		h2 {
+			letter-spacing: 4px;
+			margin: 10px 0;
+			// font-style: $font-light;
+		}
+		p {
+			margin: 0 0 10px 0;
+			font-size: 0.7em;
+			letter-spacing: 2px;
 		}
 	}
 
@@ -45,8 +38,14 @@
 		padding-left: 2em;
 		width: 40%;
 		border-left: 2px solid gray;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+
 
 		ul {
+			margin: 0px;
 			padding-left: 0px;
 			display: flex;
 			justify-content: space-around;
@@ -54,7 +53,7 @@
 			list-style-type: none;
 
 			li {
-				align-items: center;
+				// align-items: center;
 				// border-left: 1px solid gray;
 
 				a:link, a:visited {

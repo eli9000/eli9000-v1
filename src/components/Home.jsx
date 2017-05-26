@@ -28,24 +28,25 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
-				<h1>Welcome Visitor!</h1>
-
-				{!this.state.show &&
-					<div className="initButton">
-						<a onClick={this.onClick}>
-							<button>Click to Begin</button>
-						</a>
+				<header className="home-header">
+					<h1>hey howzit?</h1>
+				</header>
+				<div className="home-body">
+					<div className="home-content">
+						<h1>Welcome! Stay a while.</h1>
+						<p>
+							You're looking at the personal web-site of one Eli Johnson, aka Me.
+							Here I will showcase my web-development prowess. Don't judge. Please
+							browse around at your leisure. When you've had your fill, press:
+							<code> ALT-F4</code> to see some real coding <em>magic</em>!
+						</p>
 					</div>
-				}
 
-				{this.state.show &&
-					<div className="dialog">
-						<a onClick={this.onClick}>
-							<button>Haha Missed Me!</button>
-						</a>
+					<div className="home-pic">
+						<header>A semi professional photo... albeit sideways.</header>
+						<img src="/png/meClose.jpg" alt="Solo yo" />
 					</div>
-				}
-
+				</div>
 			</div>
 		);
 	}

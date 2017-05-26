@@ -19,7 +19,6 @@
   color: #CCE2A3;
   background-color: #444444;
   box-shadow: 7px 7px 5px #99A1A6;
-  z-index: 1;
   display: flex;
   justify-content: flex-end; }
 
@@ -114,35 +113,46 @@
 																	MIXINS
 *******************************************************************************/
 .Home {
-  text-align: center;
   color: #5C5D8D;
   width: 100%;
-  height: auto;
-  margin: 0px;
-  padding-top: 200px;
-  padding-bottom: 50px; }
+  height: 100%;
+  margin: 0 3em;
+  padding-top: 80px;
+  font-family: Courier New, Courier, monospace; }
 
-.Home a button {
-  color: white;
-  height: 40px;
-  width: 120px;
-  margin-top: 20px;
-  background-color: #001c55;
-  border: 2px solid #aaa;
-  border-radius: 10px; }
+.Home .home-header {
+  background-color: #BBE868;
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 100px; }
 
-.Home a button button:hover {
-  background-color: pink;
-  box-shadow: 5px 5px 5px gray;
-  cursor: pointer; }
+.Home .home-header h1 {
+  font-size: 4em;
+  letter-spacing: 5px;
+  color: #EFF4ED;
+  text-shadow: 2px 2px #5C5D8D; }
 
-.Home .dialog {
-  padding: 2em;
-  position: fixed;
-  top: 2em;
-  right: 1em;
-  width: 25%;
-  height: 25%; }
+.Home .home-body {
+  display: flex;
+  justify-content: space-around;
+  align-content: center; }
+
+.Home .home-body .home-content {
+  width: 40%; }
+
+.Home .home-body .home-content p {
+  line-height: 200%; }
+
+.Home .home-body .home-pic {
+  width: 40%;
+  height: 60%;
+  background-color: white; }
+
+.Home .home-body .home-pic img {
+  height: 60%;
+  width: 60%;
+  transform: rotate(-90deg);
+  margin-top: 20px; }
 
 .Giffy {
   display: flex;
@@ -189,8 +199,7 @@
 .Footer {
   width: 100%;
   background-color: #444444;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
   display: flex;
   justify-content: space-around;
   align-content: center; }
@@ -205,10 +214,11 @@
   align-content: center; }
 
 .Footer .copyright h2 {
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  margin: 10px 0; }
 
 .Footer .copyright p {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 0.7em;
   letter-spacing: 2px; }
 
@@ -216,17 +226,19 @@
   padding-right: 2em;
   padding-left: 2em;
   width: 40%;
-  border-left: 2px solid gray; }
+  border-left: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
 
 .Footer .links ul {
+  margin: 0px;
   padding-left: 0px;
   display: flex;
   justify-content: space-around;
   align-content: center;
   list-style-type: none; }
-
-.Footer .links ul li {
-  align-items: center; }
 
 .Footer .links ul li a:link, .Footer .links ul li a:visited {
   display: flex;
@@ -247,24 +259,16 @@
 h1, h2, h3, h4 {
   margin: 0; }
 
-ul {
-  margin-left: 0; }
-
 .App {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 2em;
-  right: 2em;
-  margin: 0 20px;
+  left: 0;
+  right: 0;
+  margin: 0;
   padding: 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: #EFF4ED; }
-
-.App .api-test {
-  width: 100%;
-  display: flex;
-  justify-content: space-around; }
