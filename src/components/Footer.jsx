@@ -5,23 +5,36 @@
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
+	constructor() {
+		super();
+
+		this.tooltip = this.toggleTip.bind(this);
+
+		this.state = {
+			show: false,
+		}
+	}
+
+	toggleTip() {
+		this.setState(({ show }) => ({ show: !show }));
+	}
+
 	render() {
 		return (
 			<div className="Footer">
 				<div className="copyright">
-					<div className="text">
-						<h4>eli9000.com</h4>
-						<code>&copy; Copyright 2017, and some shit.</code>
-					</div>
+					<h2>eli9000.com</h2>
+					<p>
+						&copy; 2017 eDot Inc. All rights reserved.
+					</p>
 				</div>
 				<div className="links">
-
 					<ul>
-						<li><a href="gh">
+						<li><a href="https://githup.com/eli9000">
 							<img src="/png/git.png" alt="GitHub" />
 						</a></li>
 						<li><a href="in">
-							<img src="/png/in.png" alt="LinkedIn" />
+							<img src="/png/linkedin.png" alt="LinkedIn" />
 						</a></li>
 						<li><a href="fb">
 							<img src="/png/facebook.png" alt="Facebook" />

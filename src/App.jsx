@@ -3,6 +3,7 @@
 
 //Libs
 import React, { Component } from 'react';
+// import { NavLink } from 'react-router-dom';
 
 //CSS Styles
 import './App.css';
@@ -10,8 +11,8 @@ import './App.css';
 // Components
 import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
-import Giffy from './components/Giffy.jsx';
-import Starwars from './components/Starwars.jsx';
+import About from './components/About.jsx';
+// import Starwars from './components/Starwars.jsx';
 import Footer from './components/Footer.jsx';
 
 
@@ -21,10 +22,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Header />
-				<Home />
-				<div className="api-test">
-					<Giffy />
-					<Starwars />
+				<div className="content">
+					{this.props.children}
 				</div>
 				<Footer />
 			</div>
