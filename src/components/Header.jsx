@@ -3,6 +3,8 @@
 
 //Libs
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 //CSS Styles
 
@@ -45,13 +47,16 @@ class Header extends Component {
 						<div className="menu-dropdown">
 							<ul>
 								<li>
-									<a href="#about" onClick={this.dropdown}>ABOUT</a>
+									<NavLink exact to="/" activeClassName="active" onClick={this.dropdown}>Home</NavLink>
 								</li>
 								<li>
-									<a href="#projects" onClick={this.dropdown}>PROJECTS</a>
+									<NavLink to="/about" activeClassName="active" onClick={this.dropdown}>About</NavLink>
 								</li>
 								<li>
-									<a href="#contact" onClick={this.dropdown}>CONTACT</a>
+									<NavLink to="/projects" activeClassName="active" onClick={this.dropdown}>Projects</NavLink>
+								</li>
+								<li>
+									<NavLink to="/contact" activeClassName="active" onClick={this.dropdown}>Contact</NavLink>
 								</li>
 							</ul>
 						</div>

@@ -2,12 +2,18 @@
 
 .Footer {
 	width: 100%;
+	height: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	background-color: $footer;
 	padding: 10px 0px;
 	// box-shadow: -10px -4px 5px gray;
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
+	// z-index: 1;
 
 	.copyright {
 		// margin-right: auto;
@@ -37,7 +43,7 @@
 		padding-right: 2em;
 		padding-left: 2em;
 		width: 40%;
-		border-left: 2px solid gray;
+		// border-left: 2px solid gray;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

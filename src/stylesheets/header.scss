@@ -9,7 +9,7 @@
 	// width: 100%;
 	color: $footer-font;
 	background-color: $footer;
-	box-shadow: 7px 7px 5px $third;
+	// box-shadow: 7px 7px 5px $third;
 	// z-index: 1;
 	display: flex;
 	justify-content: flex-end;
@@ -72,10 +72,11 @@
 		}
 
 		.menu-dropdown {
+
 			position: fixed;
 			top: 100px;
 			right: 0;
-			height: 200px;
+			height: 350px;
 			width: auto;
 			// background-color: #eee;
 			display: flex;
@@ -90,6 +91,7 @@
 
 				li {
 					margin-right: 1em;
+					font-size: 20px;
 				}
 			}
 		}

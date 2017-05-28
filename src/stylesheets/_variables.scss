@@ -73,9 +73,9 @@ $border-radius-xlarge:  10px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='$primary',GradientType=0 );
 }
 
-@mixin flexbox-col {
+@mixin flexbox-center {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-
+	justify-content: center;
+	align-content: center;
 }

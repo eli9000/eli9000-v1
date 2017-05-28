@@ -28,12 +28,16 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
-				<header className="home-header">
-					<h1>hey howzit?</h1>
-				</header>
+				<div className="home-head">
+					<header className="home-header">
+						<h1>hey howzit?
+						{/*<img src="/png/shaka-sign.png" alt="Shaka brah" />*/}
+						</h1>
+					</header>
+				</div>
 				<div className="home-body">
 					<div className="home-content">
-						<h1>Welcome! Stay a while.</h1>
+						<h1>Welcome!</h1>
 						<p>
 							You're looking at the personal web-site of one Eli Johnson, aka Me.
 							Here I will showcase my web-development prowess. Don't judge. Please
@@ -43,8 +47,10 @@ class Home extends Component {
 					</div>
 
 					<div className="home-pic">
-						<header>A semi professional photo... albeit sideways.</header>
-						<img src="/png/meClose.jpg" alt="Solo yo" />
+						<header>Stuck in the Matrix</header>
+						<div className="home-pic-actual">
+							<img src="/png/matix.png" alt="Solo yo" />
+						</div>
 					</div>
 				</div>
 			</div>

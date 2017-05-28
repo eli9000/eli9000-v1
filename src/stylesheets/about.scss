@@ -1,6 +1,6 @@
 @import './_variables';
 
-.Home {
+.About {
 	color: $primary;
   // width: 100%;
 	height: 100%;
@@ -9,7 +9,7 @@
 	padding-top: 80px;
 	font-family: Courier New, Courier, monospace;
 
-	.home-head {
+	.about-head {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -18,7 +18,7 @@
 		margin-bottom: 50px;
 		overflow: hidden;
 
-		.home-header {
+		.about-header {
 
 			h1 {
 				text-align: center;
@@ -43,13 +43,13 @@
 			// }
 		}
 	}
-	.home-body {
+	.about-body {
 		// margin-left: 5em;
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-start;
 
-		.home-content {
+		.about-content {
 			width: 40%;
 
 			p {
@@ -58,7 +58,7 @@
 			}
 		}
 
-		.home-pic {
+		.about-pic {
 			width: 40%;
 			height: 100%;
 			text-align: center;
@@ -67,7 +67,7 @@
 
 			}
 
-			.home-pic-actual {
+			.about-pic-actual {
 				text-align: center;
 				display: flex;
 				justify-content: center;
@@ -87,38 +87,3 @@
 		}
 	}
 }
-
-	// a button {
-	// 	color: white;
-	// 	height: 40px;
-	// 	width: 120px;
-	// 	margin-top: 20px;
-	// 	background-color: #001c55;
-	// 	border: 2px solid #aaa;
-	// 	border-radius: 10px;
-
-	// button:hover {
-	// 	background-color: pink;
-	// 	box-shadow: 5px 5px 5px gray;
-	// 	cursor: pointer;
-	// 	}
-	// }
-
-	// .dialog {
-	// 	// background-color: red;
-	// 	padding: 2em;
-	// 	position: fixed;
-	// 	top: 2em;
-	// 	right: 1em;
-	// 	$width: 50%;
-	// 	width: $width/2;
-	// 	$height: 50%;
-	// 	height: $height/2;
-	// }
-
-
-
-
-
-
-
