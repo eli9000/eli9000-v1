@@ -3,11 +3,27 @@
 
 //Libs
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 //CSS Styles
 
 //Home Component Code
 class Header extends Component {
+	constructor() {
+		super();
+
+		this.dropdown = this.showMenu.bind(this);
+
+		this.state = {
+			show: false,
+		};
+	}
+
+	showMenu() {
+		this.setState(({ show }) => ({ show: !show }));
+	}
+
 	render() {
 		return (
 			<div className="Header">
@@ -19,10 +35,32 @@ class Header extends Component {
 					</h1>
 				</div>
 				<div className="menu">
-					<ul>
-						<li>Link1</li>
-						<li>Link2</li>
-					</ul>
+					<div className="menu-icon" onClick={this.dropdown}>
+						<button className="menu-button">
+							<div className="bar1"></div>
+							<div className="bar2"></div>
+							<div className="bar3"></div>
+						</button>
+					</div>
+
+					{this.state.show &&
+						<div className="menu-dropdown">
+							<ul>
+								<li>
+									<NavLink exact to="/" activeClassName="active" onClick={this.dropdown}>Home</NavLink>
+								</li>
+								<li>
+									<NavLink to="/about" activeClassName="active" onClick={this.dropdown}>About</NavLink>
+								</li>
+								<li>
+									<NavLink to="/projects" activeClassName="active" onClick={this.dropdown}>Projects</NavLink>
+								</li>
+								<li>
+									<NavLink to="/contact" activeClassName="active" onClick={this.dropdown}>Contact</NavLink>
+								</li>
+							</ul>
+						</div>
+					}
 				</div>
 			</div>
 		);
