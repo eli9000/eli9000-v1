@@ -3,27 +3,27 @@
 
 import React, { Component } from 'react';
 
-class About extends Component {
+class Contact extends Component {
 
 	render() {
 		return (
-			<div className="About">
-				<div className="about-head">
-					<header className="about-header">
-						<h1>what's this all aboot?</h1>
+			<div className="Contact">
+				<div className="contact-head">
+					<header className="contact-header">
+						<h1>holla at a playa</h1>
 					</header>
 				</div>
-				<div className="about-body">
-					<div className="about-content">
+				<div className="contact-body">
+					<div className="contact-content">
 						<h1>Welcome!</h1>
 						<p>
 
 						</p>
 					</div>
 
-					<div className="about-pic">
+					<div className="contact-pic">
 						<header>Stuck in the Matrix</header>
-						<div className="about-pic-actual">
+						<div className="contact-pic-actual">
 							<img src="/png/htmlcssjs.png" alt="Big 3" />
 						</div>
 					</div>
@@ -33,4 +33,4 @@ class About extends Component {
 	}
 }
 
-export default About;
+export default Contact;

@@ -1,3 +1,6 @@
+/* eslint react/prefer-stateless-function: 0 */
+/* eslint jsx-a11y/img-has-alt: 0 */
+
 import React from 'react';
 import {
 	BrowserRouter as Router,
@@ -8,8 +11,8 @@ import {
 import App from './App.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
-// import Projects from './components/Projects.jsx';
-// import Contact from './components/Contact.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
 
 // Define const routes
 const routes = (
@@ -17,8 +20,8 @@ const routes = (
 		<App>
 			<Route exact path="/" component={Home} />
 			<Route path="/about" component={About} />
-			{/*<Route path="/projects" component={Projects} />
-			<Route path="/contact" component={Contact} />*/}
+			<Route path="/projects" component={Projects} />
+			<Route path="/contact" component={Contact} />
 		</App>
 	</Router>
 );

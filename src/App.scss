@@ -2,8 +2,11 @@
 
 @import "./stylesheets/header.scss";
 @import "./stylesheets/home.scss";
-@import "./stylesheets/giffy.scss";
-@import "./stylesheets/starwars.scss";
+@import "./stylesheets/about.scss";
+@import "./stylesheets/projects.scss";
+@import "./stylesheets/contact.scss";
+// @import "./stylesheets/giffy.scss";
+// @import "./stylesheets/starwars.scss";
 @import "./stylesheets/footer.scss";
 
 h1, h2, h3, h4 {
@@ -22,13 +25,5 @@ h1, h2, h3, h4 {
 	flex-direction: column;
 	justify-content: space-between;
 	align-content: center;
-	// background: linear-gradient(#fff, $primary);
 	background-color: #EFF4ED;
-
-	// .api-test {
-	// 	width: 100%;
-	// 	display: flex;
-	// 	justify-content: space-around;
-
-	// }
 }

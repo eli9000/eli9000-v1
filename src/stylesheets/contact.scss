@@ -1,0 +1,124 @@
+@import './_variables';
+
+.Contact {
+	color: $primary;
+  // width: 100%;
+	height: 100%;
+	margin: 0 6em;
+	margin-bottom: 92px;
+	padding-top: 80px;
+	font-family: Courier New, Courier, monospace;
+
+	.contact-head {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		background-color: #BBE868;
+		margin-bottom: 50px;
+		overflow: hidden;
+
+		.contact-header {
+
+			h1 {
+				text-align: center;
+				padding: 30px 0;
+				font-size: 4em;
+				letter-spacing: 5px;
+				color: #EFF4ED;
+				text-shadow: 2px 2px $primary;
+				// background-image: url('/png/shaka-sign.png');
+				// background-origin: border-box;
+				// background-position: right top;
+				// background-repeat: no-repeat;
+				// background-size: 30%;
+
+			}
+			// img {
+			// 	opacity: 0.3;
+			// 	height: 200px;
+			// 	width: 200px;
+			// 	transform: rotate(30deg);
+			// 	float: right;
+			// }
+		}
+	}
+	.contact-body {
+		// margin-left: 5em;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+
+		.contact-content {
+			width: 40%;
+
+			p {
+				line-height: 200%;
+				font-size: 120%;
+			}
+		}
+
+		.contact-pic {
+			width: 40%;
+			height: 100%;
+			text-align: center;
+
+			header {
+
+			}
+
+			.contact-pic-actual {
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+
+				img {
+					width: 80%;
+					height: 80%;
+					max-width: 290px;
+					max-height: 380px;
+					opacity: .8;
+					box-shadow: 9px 9px 5px $primary;
+					// border-top: 4px solid #BBE868;
+					border-bottom-left-radius: 20%;
+				}
+			}
+		}
+	}
+}
+
+	// a button {
+	// 	color: white;
+	// 	height: 40px;
+	// 	width: 120px;
+	// 	margin-top: 20px;
+	// 	background-color: #001c55;
+	// 	border: 2px solid #aaa;
+	// 	border-radius: 10px;
+
+	// button:hover {
+	// 	background-color: pink;
+	// 	box-shadow: 5px 5px 5px gray;
+	// 	cursor: pointer;
+	// 	}
+	// }
+
+	// .dialog {
+	// 	// background-color: red;
+	// 	padding: 2em;
+	// 	position: fixed;
+	// 	top: 2em;
+	// 	right: 1em;
+	// 	$width: 50%;
+	// 	width: $width/2;
+	// 	$height: 50%;
+	// 	height: $height/2;
+	// }
+
+
+
+
+
+
+
