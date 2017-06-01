@@ -10,19 +10,30 @@ class About extends Component {
 			<div className="About">
 				<div className="about-head">
 					<header className="about-header">
-						<h1>what's this all aboot?</h1>
+						<h1>about meh</h1>
 					</header>
 				</div>
 				<div className="about-body">
 					<div className="about-content">
-						<h1>Welcome!</h1>
-						<p>
-
-						</p>
+						<h1>Professions:</h1>
+						<ul className="professions">
+							<li className="locksmith">Locksmith
+								<span className="locksmith-text">Breaking into stuff</span>
+							</li>
+							<li className="teacher">Math teacher
+								<span className="teacher-text">Worst job EVER!</span>
+							</li>
+							<li className="sales">Sales person
+								<span className="sales-text">Over the phone, d2d, used cars</span>
+							</li>
+							<li className="waiter">Waiter => Bartender
+								<span className="waiter-text">I gotcha drunk!</span>
+							</li>
+						</ul>
 					</div>
 
 					<div className="about-pic">
-						<header>Stuck in the Matrix</header>
+						<header>The big 3</header>
 						<div className="about-pic-actual">
 							<img src="/png/htmlcssjs.png" alt="Big 3" />
 						</div>

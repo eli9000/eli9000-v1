@@ -3,6 +3,7 @@
 .Home {
 	color: $primary;
   // width: 100%;
+	max-width: 62em;
 	height: 100%;
 	margin: 0 6em;
 	margin-bottom: 92px;
@@ -10,10 +11,7 @@
 	font-family: Courier New, Courier, monospace;
 
 	.home-head {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
+		@include flexbox-center;
 		background-color: #BBE868;
 		margin-bottom: 50px;
 		overflow: hidden;

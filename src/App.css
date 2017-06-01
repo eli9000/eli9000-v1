@@ -114,6 +114,7 @@
 *******************************************************************************/
 .Home {
   color: #5C5D8D;
+  max-width: 62em;
   height: 100%;
   margin: 0 6em;
   margin-bottom: 92px;
@@ -202,15 +203,25 @@
 
 .About .about-body {
   display: flex;
+  flex-flow: row-reverse nowrap;
   justify-content: space-around;
   align-items: flex-start; }
 
 .About .about-body .about-content {
   width: 40%; }
 
-.About .about-body .about-content p {
-  line-height: 200%;
-  font-size: 120%; }
+.About .about-body .about-content .professions {
+  position: relative; }
+
+.About .about-body .about-content .professions li span {
+  visibility: hidden; }
+
+.About .about-body .about-content .professions li:hover span {
+  visibility: visible;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20%;
+  padding: 3px; }
 
 .About .about-body .about-pic {
   width: 40%;
@@ -337,26 +348,6 @@
 .Contact .contact-body .contact-content p {
   line-height: 200%;
   font-size: 120%; }
-
-.Contact .contact-body .contact-pic {
-  width: 40%;
-  height: 100%;
-  text-align: center; }
-
-.Contact .contact-body .contact-pic .contact-pic-actual {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center; }
-
-.Contact .contact-body .contact-pic .contact-pic-actual img {
-  width: 80%;
-  height: 80%;
-  max-width: 290px;
-  max-height: 380px;
-  opacity: .8;
-  box-shadow: 9px 9px 5px #5C5D8D;
-  border-bottom-left-radius: 20%; }
 
 /*******************************************************************************
 																	STYLING

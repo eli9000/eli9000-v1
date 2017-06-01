@@ -27,20 +27,7 @@
 				letter-spacing: 5px;
 				color: #EFF4ED;
 				text-shadow: 2px 2px $primary;
-				// background-image: url('/png/shaka-sign.png');
-				// background-origin: border-box;
-				// background-position: right top;
-				// background-repeat: no-repeat;
-				// background-size: 30%;
-
 			}
-			// img {
-			// 	opacity: 0.3;
-			// 	height: 200px;
-			// 	width: 200px;
-			// 	transform: rotate(30deg);
-			// 	float: right;
-			// }
 		}
 	}
 	.contact-body {
@@ -55,34 +42,6 @@
 			p {
 				line-height: 200%;
 				font-size: 120%;
-			}
-		}
-
-		.contact-pic {
-			width: 40%;
-			height: 100%;
-			text-align: center;
-
-			header {
-
-			}
-
-			.contact-pic-actual {
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				align-content: center;
-
-				img {
-					width: 80%;
-					height: 80%;
-					max-width: 290px;
-					max-height: 380px;
-					opacity: .8;
-					box-shadow: 9px 9px 5px $primary;
-					// border-top: 4px solid #BBE868;
-					border-bottom-left-radius: 20%;
-				}
 			}
 		}
 	}

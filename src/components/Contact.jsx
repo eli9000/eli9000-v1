@@ -4,6 +4,26 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+	constructor(props) {
+		super(props);
+
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+
+		this.state = {
+			value: '',
+		}
+
+	}
+
+	handleChange(e) {
+		this.setState({ value: e.target.value });
+	}
+
+	handleSubmit(e) {
+		console.log(this.state.value);
+		e.preventDefault();
+	}
 
 	render() {
 		return (
@@ -16,15 +36,24 @@ class Contact extends Component {
 				<div className="contact-body">
 					<div className="contact-content">
 						<h1>Welcome!</h1>
-						<p>
-
-						</p>
-					</div>
-
-					<div className="contact-pic">
-						<header>Stuck in the Matrix</header>
-						<div className="contact-pic-actual">
-							<img src="/png/htmlcssjs.png" alt="Big 3" />
+						<div className="contact-form">
+							<form>
+								<label>
+									Your eMail:
+									<input
+										name="userEmail"
+										type="text"
+										onChange={this.handleChange} />
+								</label>
+								<br />
+								<label>
+									Be nice:
+									<input
+										name="emailContent"
+										type="text"
+										onChange={this.handleChange} />
+								</label>
+							</form>
 						</div>
 					</div>
 				</div>
