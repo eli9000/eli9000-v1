@@ -1,3 +1,6 @@
+/* eslint react/prefer-stateless-function: 0 */
+/* eslint jsx-a11y/img-has-alt: 0 */
+
 import React, { Component } from 'react';
 
 class About extends Component {
@@ -7,22 +10,34 @@ class About extends Component {
 			<div className="About">
 				<div className="about-head">
 					<header className="about-header">
-						<h1>what's this all aboot?</h1>
+						<h1>about meh</h1>
 					</header>
 				</div>
 				<div className="about-body">
-					<div className="about-content">
-						<h1>Welcome!</h1>
-						<p>
+					<div className="mySlides">
 
-						</p>
 					</div>
-
-					<div className="about-pic">
-						<header>Stuck in the Matrix</header>
-						<div className="about-pic-actual">
-							<img src="/png/htmlcssjs.png" alt="Big 3" />
-						</div>
+					<div className="about-content">
+						<h1>Various Professions:</h1>
+						<ul className="professions">
+							<li className="locksmith">Locksmith & Access Control
+								<span className="locksmith-text">
+									Breaking into stuff, Mechanical inclination, Access Control guru, Low voltage wiring skills
+								</span>
+							</li>
+							<li className="teacher">Math Teacher
+								<span className="teacher-text">Worst job EVER!</span>
+							</li>
+							<li className="sales">Sales Dude
+								<span className="sales-text">Over the phone, d2d, used cars</span>
+							</li>
+							<li className="waiter">Waiter => Bartender
+								<span className="waiter-text">I gotcha drunk!</span>
+							</li>
+							<li className="waiter">Technician
+								<span className="waiter-text">150+ alarm installs</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

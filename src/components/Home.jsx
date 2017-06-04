@@ -30,9 +30,8 @@ class Home extends Component {
 			<div className="Home">
 				<div className="home-head">
 					<header className="home-header">
-						<h1>hey howzit?
+						<h1>hey howzit?</h1>
 						{/*<img src="/png/shaka-sign.png" alt="Shaka brah" />*/}
-						</h1>
 					</header>
 				</div>
 				<div className="home-body">
@@ -47,9 +46,11 @@ class Home extends Component {
 					</div>
 
 					<div className="home-pic">
-						<header>Stuck in the Matrix</header>
 						<div className="home-pic-actual">
 							<img src="/png/matix.png" alt="Solo yo" />
+							<div className="topleft">Stuck in the Matrix
+								<hr />
+							</div>
 						</div>
 					</div>
 				</div>

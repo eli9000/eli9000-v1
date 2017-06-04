@@ -2,8 +2,11 @@
 
 @import "./stylesheets/header.scss";
 @import "./stylesheets/home.scss";
-@import "./stylesheets/giffy.scss";
-@import "./stylesheets/starwars.scss";
+@import "./stylesheets/about.scss";
+@import "./stylesheets/projects.scss";
+@import "./stylesheets/contact.scss";
+// @import "./stylesheets/giffy.scss";
+// @import "./stylesheets/starwars.scss";
 @import "./stylesheets/footer.scss";
 
 h1, h2, h3, h4 {
@@ -19,16 +22,21 @@ h1, h2, h3, h4 {
   margin: 0;
 	padding: 0px 0px;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-content: center;
-	// background: linear-gradient(#fff, $primary);
+	// flex-direction: column;
+	justify-content: center;
+	// align-content: center;
 	background-color: #EFF4ED;
 
-	// .api-test {
-	// 	width: 100%;
-	// 	display: flex;
-	// 	justify-content: space-around;
-
-	// }
+	.content {
+		// align-self: stretch;
+		// margin-right: 10%;
+		// margin-left: 10%;
+		max-width: 1000px;
+		min-width: 1000px;
+		// margin: auto;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
 }

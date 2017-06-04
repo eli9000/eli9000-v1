@@ -4,12 +4,28 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 /*******************************************************************************
 																	STYLING
 *******************************************************************************/
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Header {
   padding: 10px 20px;
   position: fixed;
@@ -20,163 +36,96 @@
   background-color: #444444;
   display: flex;
   justify-content: flex-end; }
-  .Header .logo code {
-    font-size: 2em;
-    letter-spacing: 3px;
-    text-shadow: 5px 5px 5px #5C5D8D; }
-  .Header .menu {
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; }
-    .Header .menu .menu-icon .menu-button {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-content: center;
-      margin: 0;
-      padding: 0;
-      border: none;
-      background-color: transparent; }
-      .Header .menu .menu-icon .menu-button .bar1, .Header .menu .menu-icon .menu-button .bar2, .Header .menu .menu-icon .menu-button .bar3 {
-        width: 40px;
-        height: 5px;
-        background-color: #CCE2A3;
-        margin: 5px 0;
-        box-shadow: 4px 4px 3px #5C5D8D; }
-    .Header .menu .menu-icon .menu-button:hover .bar1, .Header .menu .menu-icon .menu-button:hover .bar2, .Header .menu .menu-icon .menu-button:hover .bar3 {
-      background-color: #fff;
-      box-shadow: none; }
-    .Header .menu .menu-icon .menu-button:focus, .Header .menu .menu-icon .menu-button:active {
-      outline: none; }
-    .Header .menu .menu-dropdown {
-      position: fixed;
-      top: 100px;
-      right: 0;
-      height: 350px;
-      width: auto;
-      display: flex;
-      justify-content: flex-end;
-      align-content: center; }
-      .Header .menu .menu-dropdown ul, .Header .menu .menu-dropdown li {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-content: flex-end; }
-        .Header .menu .menu-dropdown ul li, .Header .menu .menu-dropdown li li {
-          margin-right: 1em;
-          font-size: 20px; }
-    .Header .menu ul {
-      padding-left: 0;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-      align-content: center; }
-      .Header .menu ul li {
-        list-style-type: none;
-        align-items: center; }
-        .Header .menu ul li a {
-          width: 120px; }
-        .Header .menu ul li a:link, .Header .menu ul li a:visited {
-          color: #CCE2A3;
-          padding: 0.4em 0.9em;
-          background-color: #505050;
-          border-bottom-left-radius: 10px;
-          box-shadow: 5px 5px 3px #5C5D8D;
-          text-decoration: none;
-          font-weight: bold;
-          letter-spacing: 2px; }
-        .Header .menu ul li a:hover {
-          color: #fff;
-          background-color: #444;
-          box-shadow: none; }
 
-/*******************************************************************************
-																	STYLING
-*******************************************************************************/
-/*******************************************************************************
-																	MIXINS
-*******************************************************************************/
-.Home {
-  color: #5C5D8D;
-  height: 100%;
-  margin: 0 6em;
-  margin-bottom: 92px;
-  padding-top: 80px;
-  font-family: Courier New, Courier, monospace; }
-  .Home .home-head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background-color: #BBE868;
-    margin-bottom: 50px;
-    overflow: hidden; }
-    .Home .home-head .home-header h1 {
-      text-align: center;
-      padding: 30px 0;
-      font-size: 4em;
-      letter-spacing: 5px;
-      color: #EFF4ED;
-      text-shadow: 2px 2px #5C5D8D; }
-  .Home .home-body {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start; }
-    .Home .home-body .home-content {
-      width: 40%; }
-      .Home .home-body .home-content p {
-        line-height: 200%;
-        font-size: 120%; }
-    .Home .home-body .home-pic {
-      width: 40%;
-      height: 100%;
-      text-align: center; }
-      .Home .home-body .home-pic .home-pic-actual {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-content: center; }
-        .Home .home-body .home-pic .home-pic-actual img {
-          width: 80%;
-          height: 80%;
-          max-width: 290px;
-          max-height: 380px;
-          opacity: .8;
-          box-shadow: 9px 9px 5px #5C5D8D;
-          border-bottom-left-radius: 20%; }
+.Header .logo code {
+  font-size: 2em;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px 5px #5C5D8D; }
 
-.Giffy {
+.Header .logo code a:link, .Header .logo code a:visited {
+  text-decoration: none;
+  color: #CCE2A3; }
+
+.Header .menu {
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .Giffy .gif {
-    align-self: center;
-    text-align: center; }
-  .Giffy #gifDiv {
-    height: 200px;
-    width: 200px;
-    border: 2px solid; }
-    .Giffy #gifDiv img {
-      padding-top: 5px;
-      height: 190px;
-      width: 190px; }
+  align-content: center; }
 
-.Starwars {
-  color: white;
+.Header .menu .menu-icon .menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent; }
+
+.Header .menu .menu-icon .menu-button .bar1, .Header .menu .menu-icon .menu-button .bar2, .Header .menu .menu-icon .menu-button .bar3 {
+  width: 40px;
+  height: 5px;
+  background-color: #CCE2A3;
+  margin: 5px 0;
+  box-shadow: 4px 4px 3px #5C5D8D; }
+
+.Header .menu .menu-icon .menu-button:hover .bar1, .Header .menu .menu-icon .menu-button:hover .bar2, .Header .menu .menu-icon .menu-button:hover .bar3 {
+  background-color: #fff;
+  box-shadow: none; }
+
+.Header .menu .menu-icon .menu-button:focus, .Header .menu .menu-icon .menu-button:active {
+  outline: none; }
+
+.Header .menu .menu-dropdown {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  height: 350px;
   width: auto;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
+  align-content: center;
+  z-index: 2; }
+
+.Header .menu .menu-dropdown ul, .Header .menu .menu-dropdown li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-end; }
+
+.Header .menu .menu-dropdown ul li, .Header .menu .menu-dropdown li li {
+  margin-right: 1em;
+  font-size: 20px; }
+
+.Header .menu ul {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
   align-content: center; }
-  .Starwars .button {
-    align-self: center;
-    width: auto; }
-  .Starwars li {
-    align-self: flex-start;
-    list-style-type: circle; }
+
+.Header .menu ul li {
+  list-style-type: none;
+  align-items: center; }
+
+.Header .menu ul li a {
+  width: 120px; }
+
+.Header .menu ul li a:link, .Header .menu ul li a:visited {
+  color: #CCE2A3;
+  padding: 0.4em 0.9em;
+  background-color: #505050;
+  border-bottom-left-radius: 10px;
+  box-shadow: 5px 5px 3px #5C5D8D;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.Header .menu ul li a:hover {
+  color: #fff;
+  background-color: #444;
+  box-shadow: none; }
 
 /*******************************************************************************
 																	STYLING
@@ -184,6 +133,306 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Home {
+  color: #5C5D8D;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 92px;
+  padding-top: 80px;
+  font-family: Courier New, Courier, monospace; }
+
+.Home .home-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #BBE868;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%; }
+
+.Home .home-head .home-header h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 4em;
+  letter-spacing: 5px;
+  color: #EFF4ED;
+  text-shadow: 2px 2px #5C5D8D;
+  background-image: url("/png/shaka-sign.png");
+  background-origin: border-box;
+  background-position: right top;
+  background-repeat: no-repeat;
+  animation-name: shaka;
+  animation-duration: 3s; }
+
+.Home .home-body {
+  height: 35em;
+  display: flex;
+  justify-content: space-around; }
+
+.Home .home-body .home-content {
+  width: 40%; }
+
+.Home .home-body .home-content p {
+  line-height: 200%;
+  font-size: 120%;
+  font-weight: bold; }
+
+.Home .home-body .home-pic {
+  width: 40%;
+  height: auto; }
+
+.Home .home-body .home-pic .home-pic-actual {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: visible; }
+
+.Home .home-body .home-pic .home-pic-actual img {
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+  max-width: 356px;
+  max-height: 465px;
+  opacity: 0.6;
+  border-bottom-left-radius: 10%; }
+
+.Home .home-body .home-pic .home-pic-actual .topleft {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 120%;
+  font-weight: bold; }
+
+.Home .home-body .home-pic .home-pic-actual .topleft hr {
+  margin-top: 4px; }
+
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.About {
+  color: #5C5D8D;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 92px;
+  padding-top: 80px;
+  font-family: Courier New, Courier, monospace; }
+
+.About .about-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #BBE868;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%; }
+
+.About .about-head .about-header h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 4em;
+  letter-spacing: 5px;
+  color: #EFF4ED;
+  text-shadow: 2px 2px #5C5D8D; }
+
+.About .about-body {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.About .about-body .about-content {
+  width: 80%; }
+
+.About .about-body .about-content .professions {
+  position: relative; }
+
+.About .about-body .about-content .professions li {
+  line-height: 200%; }
+
+.About .about-body .about-content .professions li span {
+  visibility: hidden; }
+
+.About .about-body .about-content .professions li:hover span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 40%;
+  visibility: visible;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  overflow: visible; }
+
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Projects {
+  color: #5C5D8D;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 92px;
+  padding-top: 80px;
+  font-family: Courier New, Courier, monospace; }
+
+.Projects .projects-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #BBE868;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%; }
+
+.Projects .projects-head .projects-header h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 4em;
+  letter-spacing: 5px;
+  color: #EFF4ED;
+  text-shadow: 2px 2px #5C5D8D; }
+
+.Projects .projects-body {
+  background: url("/png/htmlcssjs1.png") no-repeat center top;
+  background-size: contain;
+  height: 35em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.Projects .projects-body .projects-content {
+  width: 80%; }
+
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Contact {
+  color: #5C5D8D;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 92px;
+  padding-top: 80px;
+  font-family: Courier New, Courier, monospace; }
+
+.Contact .contact-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #BBE868;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%; }
+
+.Contact .contact-head .contact-header h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 4em;
+  letter-spacing: 5px;
+  color: #EFF4ED;
+  text-shadow: 2px 2px #5C5D8D; }
+
+.Contact .contact-body {
+  display: flex;
+  justify-content: center;
+  align-content: stretch; }
+
+.Contact .contact-body .contact-form {
+  align-self: stretch;
+  width: 80%; }
+
+.Contact .contact-body #email, .Contact .contact-body #subject, .Contact .contact-body #content {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: 2px solid #BBE868;
+  background-color: #99A1A6;
+  color: #BBE868;
+  outline: none; }
+
+.Contact .contact-body #content {
+  height: 9em;
+  resize: none; }
+
+.Contact .contact-body input[type=submit] {
+  background-color: #99A1A6;
+  padding: 10px 40px;
+  font-size: 1em;
+  color: #5C5D8D;
+  outline: none;
+  border: 2px solid #BBE868;
+  border-radius: 7px; }
+
+.Contact .contact-body input[type=submit]:hover {
+  box-shadow: none;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #BBE868;
+  text-shadow: 1px 1px #444444; }
+
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Footer {
   width: 100%;
   height: auto;
@@ -196,50 +445,57 @@
   display: flex;
   justify-content: space-around;
   align-content: center; }
-  .Footer .copyright {
-    color: #CCE2A3;
-    padding-left: 2em;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center; }
-    .Footer .copyright h2 {
-      letter-spacing: 4px;
-      margin: 10px 0; }
-    .Footer .copyright p {
-      margin: 0 0 10px 0;
-      font-size: 0.7em;
-      letter-spacing: 2px; }
-  .Footer .links {
-    padding-right: 2em;
-    padding-left: 2em;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; }
-    .Footer .links ul {
-      margin: 0px;
-      padding-left: 0px;
-      display: flex;
-      justify-content: space-around;
-      align-content: center;
-      list-style-type: none; }
-      .Footer .links ul li a:link, .Footer .links ul li a:visited {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        padding: 4px;
-        height: 25px;
-        width: 25px;
-        border: 3px solid #99A1A6;
-        border-radius: 25px;
-        box-shadow: 7px 5px 5px #5C5D8D; }
-      .Footer .links ul li a:hover {
-        box-shadow: 0px 0px 0px #444444;
-        border: 3px solid white; }
+
+.Footer .copyright {
+  color: #CCE2A3;
+  padding-left: 2em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center; }
+
+.Footer .copyright h2 {
+  letter-spacing: 4px;
+  margin: 10px 0; }
+
+.Footer .copyright p {
+  margin: 0 0 10px 0;
+  font-size: 0.7em;
+  letter-spacing: 2px; }
+
+.Footer .links {
+  padding-right: 2em;
+  padding-left: 2em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+
+.Footer .links ul {
+  margin: 0px;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  list-style-type: none; }
+
+.Footer .links ul li a:link, .Footer .links ul li a:visited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 4px;
+  height: 25px;
+  width: 25px;
+  border: 3px solid #99A1A6;
+  border-radius: 25px;
+  box-shadow: 7px 5px 5px #5C5D8D; }
+
+.Footer .links ul li a:hover {
+  box-shadow: 0px 0px 0px #444444;
+  border: 3px solid white; }
 
 h1, h2, h3, h4 {
   margin: 0; }
@@ -253,7 +509,13 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 0px 0px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
   background-color: #EFF4ED; }
+
+.App .content {
+  max-width: 1000px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
