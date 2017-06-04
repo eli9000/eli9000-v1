@@ -44,10 +44,7 @@
 		padding-left: 2em;
 		width: 40%;
 		// border-left: 2px solid gray;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
+		@include flexbox-center;
 
 
 		ul {

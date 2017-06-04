@@ -2,19 +2,16 @@
 
 .Home {
 	color: $primary;
-  // width: 100%;
-	max-width: 62em;
+	// max-width: 62em;
 	height: 100%;
-	margin: 0 6em;
+	width: 100%;
+	// margin: 0 6em;
 	margin-bottom: 92px;
 	padding-top: 80px;
 	font-family: Courier New, Courier, monospace;
 
 	.home-head {
-		@include flexbox-center;
-		background-color: #BBE868;
-		margin-bottom: 50px;
-		overflow: hidden;
+		@include page-header;
 
 		.home-header {
 
@@ -25,27 +22,21 @@
 				letter-spacing: 5px;
 				color: #EFF4ED;
 				text-shadow: 2px 2px $primary;
-				// background-image: url('/png/shaka-sign.png');
-				// background-origin: border-box;
-				// background-position: right top;
-				// background-repeat: no-repeat;
-				// background-size: 30%;
+				background-image: url('/png/shaka-sign.png');
+				background-origin: border-box;
+				background-position: right top;
+				background-repeat: no-repeat;
+				animation-name: shaka;
+				animation-duration: 3s;
 
 			}
-			// img {
-			// 	opacity: 0.3;
-			// 	height: 200px;
-			// 	width: 200px;
-			// 	transform: rotate(30deg);
-			// 	float: right;
-			// }
 		}
 	}
 	.home-body {
-		// margin-left: 5em;
+		height: 35em;
 		display: flex;
 		justify-content: space-around;
-		align-items: flex-start;
+		// align-items: flex-start;
 
 		.home-content {
 			width: 40%;
@@ -53,67 +44,52 @@
 			p {
 				line-height: 200%;
 				font-size: 120%;
+				font-weight: bold;
 			}
 		}
 
 		.home-pic {
 			width: 40%;
-			height: 100%;
-			text-align: center;
-
-			header {
-
-			}
+			height: auto;
+			// text-align: center;
 
 			.home-pic-actual {
+				// position: relative;
 				text-align: center;
 				display: flex;
 				justify-content: center;
 				align-content: center;
+				overflow: visible;
 
-				img {
-					width: 80%;
-					height: 80%;
-					max-width: 290px;
-					max-height: 380px;
-					opacity: .8;
-					box-shadow: 9px 9px 5px $primary;
-					// border-top: 4px solid #BBE868;
-					border-bottom-left-radius: 20%;
+				img {   //Acutal dimensions 274 × 358
+					display: block;
+					position: absolute;
+					height: auto;
+					width: 100%;
+					z-index: -1;
+					max-width: 356px; //411
+					max-height: 465px; //537
+					opacity: 0.6;
+					// box-shadow: 9px 9px 5px $primary;
+					border-bottom-left-radius: 10%;
+				}
+
+				.topleft {
+					position: absolute;
+					width: 300px;
+					text-align: center;
+					padding-top: 10px;
+					color: #fff;
+					font-size: 120%;
+					font-weight: bold;
+					hr {
+						margin-top: 4px;
+					}
 				}
 			}
 		}
 	}
 }
-
-	// a button {
-	// 	color: white;
-	// 	height: 40px;
-	// 	width: 120px;
-	// 	margin-top: 20px;
-	// 	background-color: #001c55;
-	// 	border: 2px solid #aaa;
-	// 	border-radius: 10px;
-
-	// button:hover {
-	// 	background-color: pink;
-	// 	box-shadow: 5px 5px 5px gray;
-	// 	cursor: pointer;
-	// 	}
-	// }
-
-	// .dialog {
-	// 	// background-color: red;
-	// 	padding: 2em;
-	// 	position: fixed;
-	// 	top: 2em;
-	// 	right: 1em;
-	// 	$width: 50%;
-	// 	width: $width/2;
-	// 	$height: 50%;
-	// 	height: $height/2;
-	// }
-
 
 
 

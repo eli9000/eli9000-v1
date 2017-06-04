@@ -24,7 +24,8 @@ $third:									#99A1A6;
 $base:									#14141e;
 $gray: 									#878787;
 $footer:								#444444;
-$footer-font:						#CCE2A3;  //#ddd928;
+$footer-font:						#CCE2A3; //#ddd928
+$headerbg:							#BBE868;
 
 // ******************************** Colors: Text
 $color:									$base; // (reset)
@@ -58,21 +59,6 @@ $border-radius-xlarge:  10px;
 																	MIXINS
 *******************************************************************************/
 
-@mixin transition($speed) {
-  -webkit-transition: $speed ease;
-     -moz-transition: $speed ease;
-      -ms-transition: $speed ease;
-          transition: $speed ease;
-}
-
-@mixin gradient-bg {
-  background: #FFF;
-  background: -moz-linear-gradient(top,  #FFF 0%, $primary 100%);
-  background: -webkit-linear-gradient(top,  #FFF 0%,$primary 100%);
-  background: linear-gradient(to bottom,  #FFF 0%,$primary 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='$primary',GradientType=0 );
-}
-
 @mixin flexbox-center {
 	display: flex;
 	flex-direction: column;
@@ -80,6 +66,19 @@ $border-radius-xlarge:  10px;
 	align-content: center;
 }
 
-@mixin main-component {
-
+@mixin page-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	background-color: $headerbg;
+	margin-bottom: 50px;
+	overflow: hidden;
+	width: 100%;
 }
+
+@keyframes shaka {
+	from {background-position: left top; background-image: url('/png/shaka-sign.png');}
+	to {background-position: right top; background-image: url('/png/shaka-sign.png');}
+}
+

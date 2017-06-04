@@ -4,12 +4,28 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 /*******************************************************************************
 																	STYLING
 *******************************************************************************/
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Header {
   padding: 10px 20px;
   position: fixed;
@@ -25,6 +41,10 @@
   font-size: 2em;
   letter-spacing: 3px;
   text-shadow: 5px 5px 5px #5C5D8D; }
+
+.Header .logo code a:link, .Header .logo code a:visited {
+  text-decoration: none;
+  color: #CCE2A3; }
 
 .Header .menu {
   margin-left: auto;
@@ -65,7 +85,8 @@
   width: auto;
   display: flex;
   justify-content: flex-end;
-  align-content: center; }
+  align-content: center;
+  z-index: 2; }
 
 .Header .menu .menu-dropdown ul, .Header .menu .menu-dropdown li {
   display: flex;
@@ -112,11 +133,18 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Home {
   color: #5C5D8D;
-  max-width: 62em;
   height: 100%;
-  margin: 0 6em;
+  width: 100%;
   margin-bottom: 92px;
   padding-top: 80px;
   font-family: Courier New, Courier, monospace; }
@@ -128,7 +156,8 @@
   align-content: center;
   background-color: #BBE868;
   margin-bottom: 50px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .Home .home-head .home-header h1 {
   text-align: center;
@@ -136,39 +165,60 @@
   font-size: 4em;
   letter-spacing: 5px;
   color: #EFF4ED;
-  text-shadow: 2px 2px #5C5D8D; }
+  text-shadow: 2px 2px #5C5D8D;
+  background-image: url("/png/shaka-sign.png");
+  background-origin: border-box;
+  background-position: right top;
+  background-repeat: no-repeat;
+  animation-name: shaka;
+  animation-duration: 3s; }
 
 .Home .home-body {
+  height: 35em;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start; }
+  justify-content: space-around; }
 
 .Home .home-body .home-content {
   width: 40%; }
 
 .Home .home-body .home-content p {
   line-height: 200%;
-  font-size: 120%; }
+  font-size: 120%;
+  font-weight: bold; }
 
 .Home .home-body .home-pic {
   width: 40%;
-  height: 100%;
-  text-align: center; }
+  height: auto; }
 
 .Home .home-body .home-pic .home-pic-actual {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-content: center; }
+  align-content: center;
+  overflow: visible; }
 
 .Home .home-body .home-pic .home-pic-actual img {
-  width: 80%;
-  height: 80%;
-  max-width: 290px;
-  max-height: 380px;
-  opacity: .8;
-  box-shadow: 9px 9px 5px #5C5D8D;
-  border-bottom-left-radius: 20%; }
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+  max-width: 356px;
+  max-height: 465px;
+  opacity: 0.6;
+  border-bottom-left-radius: 10%; }
+
+.Home .home-body .home-pic .home-pic-actual .topleft {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 120%;
+  font-weight: bold; }
+
+.Home .home-body .home-pic .home-pic-actual .topleft hr {
+  margin-top: 4px; }
 
 /*******************************************************************************
 																	STYLING
@@ -176,10 +226,18 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .About {
   color: #5C5D8D;
+  width: 100%;
   height: 100%;
-  margin: 0 6em;
   margin-bottom: 92px;
   padding-top: 80px;
   font-family: Courier New, Courier, monospace; }
@@ -191,7 +249,8 @@
   align-content: center;
   background-color: #BBE868;
   margin-bottom: 50px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .About .about-head .about-header h1 {
   text-align: center;
@@ -208,40 +267,28 @@
   align-items: flex-start; }
 
 .About .about-body .about-content {
-  width: 40%; }
+  width: 80%; }
 
 .About .about-body .about-content .professions {
   position: relative; }
+
+.About .about-body .about-content .professions li {
+  line-height: 200%; }
 
 .About .about-body .about-content .professions li span {
   visibility: hidden; }
 
 .About .about-body .about-content .professions li:hover span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 40%;
   visibility: visible;
   background-color: #000;
   color: #fff;
-  border-radius: 20%;
-  padding: 3px; }
-
-.About .about-body .about-pic {
-  width: 40%;
-  height: 100%;
-  text-align: center; }
-
-.About .about-body .about-pic .about-pic-actual {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center; }
-
-.About .about-body .about-pic .about-pic-actual img {
-  width: 80%;
-  height: 80%;
-  max-width: 290px;
-  max-height: 380px;
-  opacity: .8;
-  box-shadow: 9px 9px 5px #5C5D8D;
-  border-bottom-left-radius: 20%; }
+  padding: 10px 20px;
+  overflow: visible; }
 
 /*******************************************************************************
 																	STYLING
@@ -249,10 +296,18 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Projects {
   color: #5C5D8D;
+  width: 100%;
   height: 100%;
-  margin: 0 6em;
   margin-bottom: 92px;
   padding-top: 80px;
   font-family: Courier New, Courier, monospace; }
@@ -264,7 +319,8 @@
   align-content: center;
   background-color: #BBE868;
   margin-bottom: 50px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .Projects .projects-head .projects-header h1 {
   text-align: center;
@@ -275,36 +331,15 @@
   text-shadow: 2px 2px #5C5D8D; }
 
 .Projects .projects-body {
+  background: url("/png/htmlcssjs1.png") no-repeat center top;
+  background-size: contain;
+  height: 35em;
   display: flex;
   justify-content: space-around;
   align-items: flex-start; }
 
 .Projects .projects-body .projects-content {
-  width: 40%; }
-
-.Projects .projects-body .projects-content p {
-  line-height: 200%;
-  font-size: 120%; }
-
-.Projects .projects-body .projects-pic {
-  width: 40%;
-  height: 100%;
-  text-align: center; }
-
-.Projects .projects-body .projects-pic .projects-pic-actual {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center; }
-
-.Projects .projects-body .projects-pic .projects-pic-actual img {
-  width: 80%;
-  height: 80%;
-  max-width: 290px;
-  max-height: 380px;
-  opacity: .8;
-  box-shadow: 9px 9px 5px #5C5D8D;
-  border-bottom-left-radius: 20%; }
+  width: 80%; }
 
 /*******************************************************************************
 																	STYLING
@@ -312,10 +347,18 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Contact {
   color: #5C5D8D;
+  width: 100%;
   height: 100%;
-  margin: 0 6em;
   margin-bottom: 92px;
   padding-top: 80px;
   font-family: Courier New, Courier, monospace; }
@@ -327,7 +370,8 @@
   align-content: center;
   background-color: #BBE868;
   margin-bottom: 50px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .Contact .contact-head .contact-header h1 {
   text-align: center;
@@ -339,15 +383,41 @@
 
 .Contact .contact-body {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start; }
+  justify-content: center;
+  align-content: stretch; }
 
-.Contact .contact-body .contact-content {
-  width: 40%; }
+.Contact .contact-body .contact-form {
+  align-self: stretch;
+  width: 80%; }
 
-.Contact .contact-body .contact-content p {
-  line-height: 200%;
-  font-size: 120%; }
+.Contact .contact-body #email, .Contact .contact-body #subject, .Contact .contact-body #content {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: 2px solid #BBE868;
+  background-color: #99A1A6;
+  color: #BBE868;
+  outline: none; }
+
+.Contact .contact-body #content {
+  height: 9em;
+  resize: none; }
+
+.Contact .contact-body input[type=submit] {
+  background-color: #99A1A6;
+  padding: 10px 40px;
+  font-size: 1em;
+  color: #5C5D8D;
+  outline: none;
+  border: 2px solid #BBE868;
+  border-radius: 7px; }
+
+.Contact .contact-body input[type=submit]:hover {
+  box-shadow: none;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #BBE868;
+  text-shadow: 1px 1px #444444; }
 
 /*******************************************************************************
 																	STYLING
@@ -355,6 +425,14 @@
 /*******************************************************************************
 																	MIXINS
 *******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
 .Footer {
   width: 100%;
   height: auto;
@@ -431,7 +509,13 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 0px 0px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
   background-color: #EFF4ED; }
+
+.App .content {
+  max-width: 1000px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }

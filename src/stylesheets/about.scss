@@ -2,21 +2,15 @@
 
 .About {
 	color: $primary;
-  // width: 100%;
+  width: 100%;
 	height: 100%;
-	margin: 0 6em;
+	// margin: 0 6em;
 	margin-bottom: 92px;
 	padding-top: 80px;
 	font-family: Courier New, Courier, monospace;
 
 	.about-head {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
-		background-color: #BBE868;
-		margin-bottom: 50px;
-		overflow: hidden;
+		@include page-header;
 
 		.about-header {
 
@@ -38,12 +32,13 @@
 		align-items: flex-start;
 
 		.about-content {
-			width: 40%;
+			width: 80%;
 
 			.professions {
 				position: relative;
 
 				li {
+					line-height: 200%;
 					span {
 						visibility: hidden;
 					}
@@ -51,37 +46,18 @@
 
 				li:hover {
 					span {
+						position: absolute;
+						right: 0px;
+						top: 0px;
+						height: 100%;
+						width: 40%;
 						visibility: visible;
 						background-color: #000;
 						color: #fff;
-						border-radius: 20%;
-						padding: 3px;
+						padding: 10px 20px;
+						overflow: visible;
 
 					}
-				}
-			}
-		}
-
-		.about-pic {
-			width: 40%;
-			height: 100%;
-			text-align: center;
-
-			.about-pic-actual {
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				align-content: center;
-
-				img {
-					width: 80%;
-					height: 80%;
-					max-width: 290px;
-					max-height: 380px;
-					opacity: .8;
-					box-shadow: 9px 9px 5px $primary;
-					// border-top: 4px solid #BBE868;
-					border-bottom-left-radius: 20%;
 				}
 			}
 		}

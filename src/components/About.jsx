@@ -14,29 +14,30 @@ class About extends Component {
 					</header>
 				</div>
 				<div className="about-body">
+					<div className="mySlides">
+
+					</div>
 					<div className="about-content">
-						<h1>Professions:</h1>
+						<h1>Various Professions:</h1>
 						<ul className="professions">
-							<li className="locksmith">Locksmith
-								<span className="locksmith-text">Breaking into stuff</span>
+							<li className="locksmith">Locksmith & Access Control
+								<span className="locksmith-text">
+									Breaking into stuff, Mechanical inclination, Access Control guru, Low voltage wiring skills
+								</span>
 							</li>
-							<li className="teacher">Math teacher
+							<li className="teacher">Math Teacher
 								<span className="teacher-text">Worst job EVER!</span>
 							</li>
-							<li className="sales">Sales person
+							<li className="sales">Sales Dude
 								<span className="sales-text">Over the phone, d2d, used cars</span>
 							</li>
 							<li className="waiter">Waiter => Bartender
 								<span className="waiter-text">I gotcha drunk!</span>
 							</li>
+							<li className="waiter">Technician
+								<span className="waiter-text">150+ alarm installs</span>
+							</li>
 						</ul>
-					</div>
-
-					<div className="about-pic">
-						<header>The big 3</header>
-						<div className="about-pic-actual">
-							<img src="/png/htmlcssjs.png" alt="Big 3" />
-						</div>
 					</div>
 				</div>
 			</div>
