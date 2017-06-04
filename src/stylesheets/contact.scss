@@ -1,0 +1,72 @@
+@import './_variables';
+
+.Contact {
+	color: $primary;
+  width: 100%;
+	height: 100%;
+	// margin: 0 6em;
+	margin-bottom: 92px;
+	padding-top: 80px;
+	font-family: Courier New, Courier, monospace;
+
+	.contact-head {
+		@include page-header;
+
+		.contact-header {
+
+			h1 {
+				text-align: center;
+				padding: 30px 0;
+				font-size: 4em;
+				letter-spacing: 5px;
+				color: #EFF4ED;
+				text-shadow: 2px 2px $primary;
+			}
+		}
+	}
+	.contact-body {
+		display: flex;
+		justify-content: center;
+		align-content: stretch;
+
+		.contact-form {
+			align-self: stretch;
+			width: 80%;
+		}
+
+		#email, #subject, #content {
+			width: 100%;
+			padding: 12px 20px;
+			font-size: 1em;
+			border: 2px solid $headerbg;
+			background-color: $third;
+			color: $headerbg;
+			outline: none;
+		}
+
+		#content {
+			height: 9em;
+			resize: none;
+		}
+
+		input[type=submit] {
+			background-color: $third;
+			padding: 10px 40px;
+			font-size: 1em;
+			color: $primary;
+			outline: none;
+			border: 2px solid $headerbg;
+			border-radius: 7px;
+			// text-shadow: 1px 1px #fff;
+			// box-shadow: 3px 3px 3px $primary;
+		}
+
+		input[type=submit]:hover {
+			box-shadow: none;
+			color: #fff;
+			border: 2px solid #fff;
+			background-color: $headerbg;
+			text-shadow: 1px 1px $footer;
+		}
+	}
+}

@@ -30,8 +30,8 @@ class Header extends Component {
 				<div className="logo">
 					<h1>
 						<code>
-							eli9000.com
-					</code>
+							<a href="http://www.eli9000.com">eli9000.com</a>
+						</code>
 					</h1>
 				</div>
 				<div className="menu">
