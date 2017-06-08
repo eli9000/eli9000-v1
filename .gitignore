@@ -2,6 +2,7 @@
 
 # generated CSS files
  src/**/*.css
+ src/App.css
  !src/index.css
  .sass-cache/
 
