@@ -30,19 +30,16 @@ export default class Footer extends Component {
 				</div>
 				<div className="links">
 					<ul>
-						<li><a href="https://githup.com/eli9000">
+						<li><a href="https://github.com/eli9000">
 							<img src="/png/git.png" alt="GitHub" />
 						</a></li>
-						<li><a href="in">
+						<li><a href="https://www.linkedin.com/in/eli9000/">
 							<img src="/png/linkedin.png" alt="LinkedIn" />
 						</a></li>
-						<li><a href="fb">
-							<img src="/png/facebook.png" alt="Facebook" />
-						</a></li>
-						<li><a href="tw">
+						<li><a href="https://twitter.com/_eli9000">
 							<img src="/png/twitter.png" alt="Twitter" />
 						</a></li>
-						<li><a href="mail">
+						<li><a href="mailto:eli9000@gmail.com?Subject=Hello%20Eli,%20love%20the%20site!">
 							<img src="/png/mail.png" alt="Mail" />
 						</a></li>
 					</ul>

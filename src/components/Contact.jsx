@@ -50,7 +50,7 @@ class Contact extends Component {
 			<div className="Contact">
 				<div className="contact-head">
 					<header className="contact-header">
-						<h1>holla at a playa</h1>
+						<h1>holla at ya boy</h1>
 					</header>
 				</div>
 				<div className="contact-body">
@@ -75,7 +75,7 @@ class Contact extends Component {
 									name="subject"
 									id="subject"
 									type="text"
-									placeholder="Why are you so cool?"
+									placeholder="Improvements you could make:"
 									value={this.state.subject}
 									onChange={this.handleSubjectChange} />
 							</label>
@@ -87,7 +87,7 @@ class Contact extends Component {
 									name="content"
 									id="content"
 									type="text"
-									placeholder="I hope to be exactly like you"
+									placeholder="Perhaps you could make your components a bit more modular..."
 									value={this.state.content}
 									onChange={this.handleContentChange} />
 							</label>

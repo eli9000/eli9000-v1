@@ -39,25 +39,6 @@
 
 				li {
 					line-height: 200%;
-					span {
-						visibility: hidden;
-					}
-				}
-
-				li:hover {
-					span {
-						position: absolute;
-						right: 0px;
-						top: 0px;
-						height: 100%;
-						width: 40%;
-						visibility: visible;
-						background-color: #000;
-						color: #fff;
-						padding: 10px 20px;
-						overflow: visible;
-
-					}
 				}
 			}
 		}

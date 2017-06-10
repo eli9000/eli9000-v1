@@ -31,17 +31,13 @@ class Home extends Component {
 				<div className="home-head">
 					<header className="home-header">
 						<h1>hey howzit?</h1>
-						{/*<img src="/png/shaka-sign.png" alt="Shaka brah" />*/}
 					</header>
 				</div>
 				<div className="home-body">
 					<div className="home-content">
 						<h1>Welcome!</h1>
 						<p>
-							You're looking at the personal web-site of one Eli Johnson, aka Me.
-							Here I will showcase my web-development prowess. Don't judge. Please
-							browse around at your leisure. When you've had your fill, press:
-							<code> ALT-F4</code> to see some real coding <em>magic</em>!
+							Hi, I'm Eli.
 						</p>
 					</div>
 
