@@ -25,7 +25,7 @@ export default class Footer extends Component {
 				<div className="copyright">
 					<h2>eli9000.com</h2>
 					<p>
-						&copy; 2017 eDot Inc. All rights reserved.
+						&copy; 2017 (insert cool company name here). All rights reserved.
 					</p>
 				</div>
 				<div className="links">
@@ -44,7 +44,7 @@ export default class Footer extends Component {
 						</a></li>
 					</ul>
 				</div>
-			</div >
+			</div>
 		)
 	}
 }

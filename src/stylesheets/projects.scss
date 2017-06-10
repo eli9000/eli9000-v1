@@ -1,13 +1,7 @@
 @import './_variables';
 
 .Projects {
-	color: $primary;
-  width: 100%;
-	height: 100%;
-	// margin: 0 6em;
-	margin-bottom: 92px;
-	padding-top: 80px;
-	font-family: Courier New, Courier, monospace;
+	@include component-main;
 
 	.projects-head {
 		@include page-header;
@@ -15,26 +9,30 @@
 		.projects-header {
 
 			h1 {
-				text-align: center;
-				padding: 30px 0;
-				font-size: 4em;
-				letter-spacing: 5px;
-				color: #EFF4ED;
-				text-shadow: 2px 2px $primary;
+				@include page-header-h1;
 			}
 		}
 	}
 	.projects-body {
-		background: url("/png/htmlcssjs1.png") no-repeat center top;
-		background-size: contain;
+		// background: url("/png/htmlcssjs1.png") no-repeat center top;
+		// background-size: contain;
 		height: 35em;
 		display: flex;
-		justify-content: space-around;
-		align-items: flex-start;
+		justify-content: center;
+		align-items: center;
 
 		.projects-content {
-			width: 80%;
-			// height: 100em;
+			width: 90%;
+
+			p {
+				line-height: 140%;
+				font-size: 120%;
+
+				h2 {
+					margin-bottom: 10px;
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

@@ -1,14 +1,7 @@
 @import './_variables';
 
 .Home {
-	color: $primary;
-	// max-width: 62em;
-	height: 100%;
-	width: 100%;
-	// margin: 0 6em;
-	margin-bottom: 92px;
-	padding-top: 80px;
-	font-family: Courier New, Courier, monospace;
+	@include component-main;
 
 	.home-head {
 		@include page-header;
@@ -16,12 +9,7 @@
 		.home-header {
 
 			h1 {
-				text-align: center;
-				padding: 30px 0;
-				font-size: 4em;
-				letter-spacing: 5px;
-				color: #EFF4ED;
-				text-shadow: 2px 2px $primary;
+				@include page-header-h1;
 				background-image: url('/png/shaka-sign.png');
 				background-origin: border-box;
 				background-position: right top;
@@ -36,52 +24,50 @@
 		height: 35em;
 		display: flex;
 		justify-content: space-around;
-		// align-items: flex-start;
+		align-items: center;
 
 		.home-content {
-			width: 40%;
+			width: 50%;
 
 			p {
-				line-height: 200%;
+				line-height: 140%;
 				font-size: 120%;
-				font-weight: bold;
 			}
 		}
 
 		.home-pic {
 			width: 40%;
-			height: auto;
-			// text-align: center;
+			height: 100%;
+			@include flexbox-center;
 
 			.home-pic-actual {
-				// position: relative;
+				align-self: stretch;
 				text-align: center;
 				display: flex;
 				justify-content: center;
 				align-content: center;
-				overflow: visible;
 
 				img {   //Acutal dimensions 274 × 358
-					display: block;
-					position: absolute;
-					height: auto;
-					width: 100%;
 					z-index: -1;
-					max-width: 356px; //411
-					max-height: 465px; //537
-					opacity: 0.6;
-					// box-shadow: 9px 9px 5px $primary;
-					border-bottom-left-radius: 10%;
+					min-width: 356px;
+					min-height: 465px;
+					max-width: 356px;
+					max-height: 465px;
+					opacity: 0.9;
+					box-shadow: 9px 9px 5px $primary;
+					border-radius: 10%;
 				}
 
 				.topleft {
+					z-index: -1;
 					position: absolute;
 					width: 300px;
 					text-align: center;
 					padding-top: 10px;
-					color: #fff;
+					color: $headerbg;
 					font-size: 120%;
 					font-weight: bold;
+
 					hr {
 						margin-top: 4px;
 					}

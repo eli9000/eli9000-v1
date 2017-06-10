@@ -1,13 +1,7 @@
 @import './_variables';
 
 .Contact {
-	color: $primary;
-  width: 100%;
-	height: 100%;
-	// margin: 0 6em;
-	margin-bottom: 92px;
-	padding-top: 80px;
-	font-family: Courier New, Courier, monospace;
+	@include component-main;
 
 	.contact-head {
 		@include page-header;
@@ -15,33 +9,29 @@
 		.contact-header {
 
 			h1 {
-				text-align: center;
-				padding: 30px 0;
-				font-size: 4em;
-				letter-spacing: 5px;
-				color: #EFF4ED;
-				text-shadow: 2px 2px $primary;
+				@include page-header-h1;
 			}
 		}
 	}
 	.contact-body {
 		display: flex;
 		justify-content: center;
-		align-content: stretch;
+		align-content: center;
 
 		.contact-form {
-			align-self: stretch;
-			width: 80%;
+			width: 90%;
 		}
 
 		#email, #subject, #content {
 			width: 100%;
-			padding: 12px 20px;
+			padding: 10px 0px 10px 15px;
 			font-size: 1em;
 			border: 2px solid $headerbg;
-			background-color: $third;
-			color: $headerbg;
+			background-color: lightgray;
+			color: $primary;
 			outline: none;
+			box-shadow: inset 2px 2px 2px $primary;
+
 		}
 
 		#content {
@@ -57,8 +47,7 @@
 			outline: none;
 			border: 2px solid $headerbg;
 			border-radius: 7px;
-			// text-shadow: 1px 1px #fff;
-			// box-shadow: 3px 3px 3px $primary;
+			box-shadow: 3px 3px 3px $primary;
 		}
 
 		input[type=submit]:hover {
