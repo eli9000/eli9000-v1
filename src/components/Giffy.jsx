@@ -17,10 +17,6 @@ class Giffy extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getGif = this.sendRequest.bind(this);
-		// this.getGif = debounce(this.sendRequest, 1000, {
-		// 	leading: true,
-		// 	trailing: true,
-		// });
 
 		this.state = {
 			data: {},
