@@ -7,7 +7,7 @@
 		"build-css": "node-sass src/ -o src/",
 		"watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
 		"start-js": "react-scripts start",
-		"start:server": "node api",
+		"start:server": "nodemon --inspect api",
 		"start": "npm-run-all -p watch-css start-js start:server",
 		"build": "npm run build-css && react-scripts build",
 		"predeploy": "npm run build",
@@ -27,7 +27,9 @@
 		"mailgun-js": "^0.11.2",
 		"react": "^15.5.4",
 		"react-dom": "^15.5.4",
-		"react-router-dom": "^4.1.1"
+		"react-router-dom": "^4.1.1",
+		"request": "^2.81.0",
+		"request-promise": "^4.2.1"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
@@ -40,6 +42,7 @@
 		"eslint-plugin-meteor": "^4.0.1",
 		"eslint-plugin-react": "^7.0.0",
 		"node-sass": "^4.5.2",
+		"nodemon": "^1.11.0",
 		"npm-run-all": "^4.0.2",
 		"react-scripts": "0.9.5"
 	}

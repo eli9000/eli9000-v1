@@ -11,6 +11,7 @@
 			h1 {
 				@include page-header-h1;
 				background-image: url('/png/shaka-sign.png');
+				background-size: 3em 3em;
 				background-origin: border-box;
 				background-position: right top;
 				background-repeat: no-repeat;
@@ -21,22 +22,28 @@
 		}
 	}
 	.home-body {
-		height: 35em;
+		// height: 35em;
 		display: flex;
-		justify-content: space-around;
+		flex-flow: column nowrap;
+		justify-content: center;
 		align-items: center;
+		height: auto;
 
 		.home-content {
-			width: 50%;
+			width: 90%;
+
+			img {
+				width: 100%;
+			}
 
 			p {
-				line-height: 140%;
-				font-size: 120%;
+				// line-height: 140%;
+				// font-size: 120%;
 			}
 		}
 
 		.home-pic {
-			width: 40%;
+			// width: 40%;
 			height: 100%;
 			@include flexbox-center;
 
@@ -48,13 +55,13 @@
 				align-content: center;
 
 				img {   //Acutal dimensions 274 × 358
-					z-index: -1;
+					// z-index: -1;
 					min-width: 356px;
 					min-height: 465px;
 					max-width: 356px;
 					max-height: 465px;
 					opacity: 0.9;
-					box-shadow: 9px 9px 5px $primary;
+					// box-shadow: 9px 9px 5px $primary;
 					border-radius: 10%;
 				}
 

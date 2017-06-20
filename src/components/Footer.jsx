@@ -22,12 +22,12 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<div className="Footer">
-				<div className="copyright">
+				{/*<div className="copyright">
 					<h2>eli9000.com</h2>
 					<p>
 						&copy; 2017 (insert cool company name here). All rights reserved.
 					</p>
-				</div>
+				</div>*/}
 				<div className="links">
 					<ul>
 						<li><a href="https://github.com/eli9000">

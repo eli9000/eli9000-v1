@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 notes.md
 aboutMe.json
-
+apiKey.json
 
 src/components/lib/Slideshow.jsx
 

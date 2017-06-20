@@ -3,6 +3,10 @@
 
 import React, { Component } from 'react';
 import Axios from 'axios';
+// import Express from 'express';
+// import mailgun from 'mailgun-js';
+
+// import '../api/apiKey.json';
 
 class Contact extends Component {
 	constructor(props) {
@@ -12,12 +16,17 @@ class Contact extends Component {
 		this.handleContentChange = this.handleContentChange.bind(this);
 		this.handleSubjectChange = this.handleSubjectChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.sendMail = this.sendMail.bind(this);
+
+		// this.state = {
+		// 	email: '',
+		// 	subject: '',
+		// 	content: '',
+		// }
 
 		this.state = {
-			email: '',
-			subject: '',
-			content: '',
+			email: 'eli9000@gmail.com',
+			subject: 'Test Subject',
+			content: 'Test body content.',
 		}
 
 	}
@@ -35,17 +44,13 @@ class Contact extends Component {
 	}
 
 	handleSubmit(e) {
-		// console.log(this.state.email);
-		// console.log(this.state.subject);
-		// console.log(this.state.content);
-
-		this.setState({
-			email: '',
-			subject: '',
-			content: '',
-		});
 		e.preventDefault();
 
+		// this.setState({
+		// 	email: '',
+		// 	subject: '',
+		// 	content: '',
+		// });
 	}
 
 	render() {
@@ -53,13 +58,13 @@ class Contact extends Component {
 			<div className="Contact">
 				<div className="contact-head">
 					<header className="contact-header">
-						<h1>holla at ya boy</h1>
+						<h1>get at me</h1>
 					</header>
 				</div>
 				<div className="contact-body">
 					{/*<h1>Welcome!</h1>*/}
 					<div className="contact-form">
-						<form onSubmit={this.handleSubmit}>
+						<form method="post" onSubmit={this.handleSubmit}>
 							<label>
 								<h2>Your eMail:</h2>
 								<input
@@ -78,7 +83,7 @@ class Contact extends Component {
 									name="subject"
 									id="subject"
 									type="text"
-									placeholder="Improvements you could make:"
+									placeholder="Improvements you could make: Fix your contact form =P"
 									value={this.state.subject}
 									onChange={this.handleSubjectChange} />
 							</label>
@@ -90,57 +95,19 @@ class Contact extends Component {
 									name="content"
 									id="content"
 									type="text"
-									placeholder="Perhaps you could make your components a bit more modular..."
+									placeholder="**NOTE** this feature is NOT working... Please click on email icon to send message. THANKS!"
 									value={this.state.content}
 									onChange={this.handleContentChange} />
 							</label>
 							<br />
 							<br />
-							<input type="submit" value="Submit" onClick={this.sendMail} />
+							<input type="submit" value="Submit" />
 						</form>
 					</div>
 				</div>
 			</div>
 		);
 	}
-
-	sendMail(e) {
-		const server = '/';
-		const email = this.state.email;
-		const subject = this.state.subject;
-		const content = this.state.content;
-
-		Axios.post(server, {
-			from: email,
-			subject: subject,
-			content: content,
-		})
-			.then(function (responce) {
-				console.log(responce);
-			})
-			.then(function (error) {
-				console.log(error);
-			})
-	}
-
-	// sendMail(e) {
-
-	// 	// const endpoint = 'https://api.mailgun.net/v3/mail.eli9000.com';
-	// 	const domain = 'mail.eli9000.com';
-	// 	const api_key = 'key-c3f9c798b3087d00bf5276977c12fa7f';
-	// 	const mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
-
-	// 	var data = {
-	// 		from: this.state.email,
-	// 		// to: 'postmaster@mail.eli9000.com',
-	// 		subject: this.state.subject,
-	// 		text: this.state.content,
-	// 	};
-
-	// 	mailgun.messages().send(data, function (error, body) {
-	// 		console.log(body);
-	// 	});
-	// }
 }
 
 export default Contact;

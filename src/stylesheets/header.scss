@@ -1,7 +1,7 @@
 @import './_variables';
 
 .Header {
-	padding: 10px 20px;
+	padding: .8em 1em;
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -12,14 +12,15 @@
 	// box-shadow: 7px 7px 5px $third;
 	// z-index: 1;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
 
 	.logo {
 
 		code {
-			font-size: 2em;
+			font-size: 1em;
 			letter-spacing: 3px;
-			text-shadow: 5px 5px 5px $primary;
+			text-shadow: 3px 3px 3px $primary;
 
 			a:link, a:visited {
 				text-decoration: none;
@@ -29,7 +30,7 @@
 	}
 
 	.menu {
-		margin-left: auto;
+		// float: right;
 		@include flexbox-center;
 
 		.menu-icon {
@@ -49,10 +50,10 @@
 				background-color: transparent;
 
 				.bar1, .bar2, .bar3 {
-					width: 40px;
-					height: 5px;
+					width: 32px;
+					height: 4px;
 					background-color: $footer-font;
-					margin: 5px 0;
+					margin: 4px 0;
 					box-shadow: 4px 4px 3px $primary;
 
 				}
@@ -74,9 +75,9 @@
 		.menu-dropdown {
 
 			position: fixed;
-			top: 100px;
+			top: 80px;
 			right: 0;
-			height: 350px;
+			height: 300px;
 			width: auto;
 			// background-color: #eee;
 			display: flex;
@@ -91,7 +92,7 @@
 				align-content: flex-end;
 
 				li {
-					margin-right: 1em;
+					margin-right: .5em;
 					font-size: 20px;
 				}
 			}
@@ -110,7 +111,7 @@
 				align-items: center;
 
 				a {
-					width: 120px;
+					width: 100px;
 				}
 
 				a:link, a:visited {

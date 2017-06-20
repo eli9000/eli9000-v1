@@ -16,7 +16,7 @@ class Projects extends Component {
 				<div className="projects-body">
 					<div className="projects-content">
 						<p>
-							<h2>The Mike Johnson Project</h2>
+							<h2>Mike Johnson Project</h2>
 							This will be simple Meteor app that will connect with current and past students of Mr. J, my Dad.
 							Having taught for over 30 years, this idea came to me when pondering the crazy number of students
 							my Dad has taught over the years. Users will login with Facebook and from that data we will make

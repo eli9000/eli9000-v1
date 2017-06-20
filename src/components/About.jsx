@@ -17,7 +17,7 @@ class About extends Component {
 					<div className="about-content">
 						<p>
 							<em>This is a filler page that will soon be replace with a query form letting
-								you search a database with information about your truely. In the mean time,
+								you search a database with information about yours truely. In the mean time,
 								you're stuck with this...
 							</em>
 						</p>
@@ -31,12 +31,12 @@ class About extends Component {
 						<p>
 							<h2>College years:</h2>
 							I graduated in the spring of 2009 from the University of Utah with a
-							Bachelor of Science degree in Mathematics with a teaching emphasis.
+							Bachelor of Science degree in Mathematics with a Teaching emphasis.
 						</p>
 						<p>
 							<h2>Professional career:</h2>
-							I taught math for about 5 years and learned many things, most notably that I
-							needed a new career. Now I am committed to the code. I will keep learning
+							I taught math for about 5 years and learned many things, most notably was that I
+							needed a new career. Now I'm committed to the code. I will keep learning
 							and improving every day. It's a new and exciting time in the coding world
 							and I'm stoked to be apart of it in whatever small way.
 						</p>

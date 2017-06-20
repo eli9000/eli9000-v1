@@ -1,12 +1,12 @@
 @import './_variables';
 
 .Footer {
-	width: 100%;
+	// width: 100%;
 	height: auto;
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	// position: absolute;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
 	background-color: $footer;
 	padding: 10px 0px;
 	// box-shadow: -10px -4px 5px gray;
@@ -19,8 +19,8 @@
 		// margin-right: auto;
 		// margin-left: 50px;
 		color: $footer-font;
-		padding-left: 2em;
-		width: 60%;
+		// padding-left: 2em;
+		// width: 60%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -40,11 +40,11 @@
 
 	.links {
 		// margin-left: auto;
-		padding-right: 2em;
-		padding-left: 2em;
-		width: 40%;
+		// padding-right: 2em;
+		// padding-left: 2em;
+		width: 100%;
 		// border-left: 2px solid gray;
-		@include flexbox-center;
+		// @include flexbox-center;
 
 
 		ul {
@@ -52,7 +52,7 @@
 			padding-left: 0px;
 			display: flex;
 			justify-content: space-around;
-			align-content: center;
+			align-items: center;
 			list-style-type: none;
 
 			li {
