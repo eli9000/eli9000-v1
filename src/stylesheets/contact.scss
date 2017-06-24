@@ -6,11 +6,8 @@
 	.contact-head {
 		@include page-header;
 
-		.contact-header {
-
-			h1 {
-				@include page-header-h1;
-			}
+		h1 {
+			@include page-header-h1;
 		}
 	}
 	.contact-body {

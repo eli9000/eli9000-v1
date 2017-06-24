@@ -6,11 +6,8 @@
 	.about-head {
 		@include page-header;
 
-		.about-header {
-
-			h1 {
-				@include page-header-h1;
-			}
+		h1 {
+			@include page-header-h1;
 		}
 	}
 	.about-body {

@@ -6,19 +6,16 @@
 	.home-head {
 		@include page-header;
 
-		.home-header {
+		h1 {
+			@include page-header-h1;
+			background-image: url('/png/shaka-sign.png');
+			background-size: 3em 3em;
+			background-origin: border-box;
+			background-position: right top;
+			background-repeat: no-repeat;
+			animation-name: shaka;
+			animation-duration: 3s;
 
-			h1 {
-				@include page-header-h1;
-				background-image: url('/png/shaka-sign.png');
-				background-size: 3em 3em;
-				background-origin: border-box;
-				background-position: right top;
-				background-repeat: no-repeat;
-				animation-name: shaka;
-				animation-duration: 3s;
-
-			}
 		}
 	}
 	.home-body {
@@ -34,11 +31,6 @@
 
 			img {
 				width: 100%;
-			}
-
-			p {
-				// line-height: 140%;
-				// font-size: 120%;
 			}
 		}
 

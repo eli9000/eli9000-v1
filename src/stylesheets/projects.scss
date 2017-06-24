@@ -6,11 +6,8 @@
 	.projects-head {
 		@include page-header;
 
-		.projects-header {
-
-			h1 {
-				@include page-header-h1;
-			}
+		h1 {
+			@include page-header-h1;
 		}
 	}
 	.projects-body {

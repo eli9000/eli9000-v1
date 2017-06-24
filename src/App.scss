@@ -14,29 +14,20 @@ h1, h2, h3, h4 {
 }
 
 .App {
-	// position: fixed;
-	// top: 0;
-	// bottom: 0;
-	// left: 0;
-	// right: 0;
-  // margin: 0;
 	padding: 0px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	// align-items: flex-start;
-	// width: 100%;
+	align-content: center;
 	background-color: #EFF4ED;
-	min-height: 667px;
-
-	.content {
-		// max-width: 1200px;
-		// min-width: 1000px;
-		// height: 100%;
-		// width: 100%;
-		// padding: 0 2em;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
+	// min-height: 667px;
+	@include phone {
+		min-height: 736px;
+	}
+	@include tablet {
+		min-height: 1024px;
+	}
+	@include desktop {
+		min-height: 1024px;
 	}
 }

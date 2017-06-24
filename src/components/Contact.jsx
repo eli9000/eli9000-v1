@@ -2,7 +2,7 @@
 /* eslint jsx-a11y/img-has-alt: 0 */
 
 import React, { Component } from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 // import Express from 'express';
 // import mailgun from 'mailgun-js';
 
@@ -57,14 +57,12 @@ class Contact extends Component {
 		return (
 			<div className="Contact">
 				<div className="contact-head">
-					<header className="contact-header">
-						<h1>get at me</h1>
-					</header>
+					<h1>get at me</h1>
 				</div>
 				<div className="contact-body">
 					{/*<h1>Welcome!</h1>*/}
 					<div className="contact-form">
-						<form method="post" onSubmit={this.handleSubmit}>
+						<form method="POST" onSubmit={this.handleSubmit}>
 							<label>
 								<h2>Your eMail:</h2>
 								<input

@@ -56,17 +56,45 @@ $border-radius-xlarge:  10px;
 
 
 /*******************************************************************************
+															MEDIA QUERIES
+*******************************************************************************/
+
+$phone-width: 414px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+	@media (min-width: 1px) and (max-width: #{$phone-width}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+
+/*******************************************************************************
 																	MIXINS
 *******************************************************************************/
 
 @mixin component-main {
-	align-self: stretch;
 	color: $primary;
 	height: 100%;
 	width: 100%;
-	// margin-bottom: 92px;
 	padding-top: 4em;
 	font-family: Courier New, Courier, monospace;
+	@include phone {
+		color: blue;
+	}
 }
 
 @mixin page-header {
@@ -76,7 +104,6 @@ $border-radius-xlarge:  10px;
 	align-content: center;
 	background-color: $headerbg;
 	margin-bottom: 1em;
-	// overflow: hidden;
 	width: 100%;
 
 }

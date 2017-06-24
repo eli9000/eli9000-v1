@@ -29,9 +29,7 @@ class Home extends Component {
 		return (
 			<div className="Home">
 				<div className="home-head">
-					<header className="home-header">
-						<h1>hey howzit?</h1>
-					</header>
+					<h1>hey howzit?</h1>
 				</div>
 
 				<div className="home-body">
@@ -39,17 +37,17 @@ class Home extends Component {
 
 						{/*<h1>Welcome!</h1>*/}
 						<p>
-							I'm Eli. Thanks for checking out my website. Built from scratch using React JS,
+							Thanks for checking out my website. Built from scratch using React JS,
 							Sassy CSS, Flexbox, and NPM.
 						</p>
 						<img src="/gifs/uc-rotate.gif" />
 						<p>
-							Had to include the ubiquitous 'Under Construction' gif from the days of Antioch and Yor.
-							<br /><code>const Antioch = Geocities</code>
+							Had to include the ubiquitous 'Under Construction' gif, strictly for nostalgic
+							purposes. Reminds me of the good ol' Geocities days.
 						</p>
 						<p>
-							While I'm FAR from finished, I'd love to hear any suggestions, criticisms,
-							and/or compliments you might have. Just navigate to the 'Contact' page or
+							This project is FAR from finished! However, I'd love to hear any suggestions,
+							and/or comments you might have. Just navigate to the 'Contact' page or
 							click the 'email' icon at the bottom right of the page!
 						</p>
 					</div>
