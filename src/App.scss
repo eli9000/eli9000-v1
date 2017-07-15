@@ -9,6 +9,10 @@
 // @import "./stylesheets/starwars.scss";
 @import "./stylesheets/footer.scss";
 
+// * {
+// 	box-sizing: border-box;
+// }
+
 h1, h2, h3, h4 {
 	margin: 0;
 }
@@ -19,15 +23,16 @@ h1, h2, h3, h4 {
 	flex-direction: column;
 	justify-content: space-between;
 	align-content: center;
-	background-color: #EFF4ED;
-	// min-height: 667px;
-	@include phone {
-		min-height: 736px;
-	}
-	@include tablet {
-		min-height: 1024px;
-	}
-	@include desktop {
-		min-height: 1024px;
-	}
+	background-color: #fff;
+	min-height: 100vh;
+	// box-sizing: border-box;
+	// @include phone {
+	// 	min-height: 736px;
+	// }
+	// @include tablet {
+	// 	min-height: 1024px;
+	// }
+	// @include desktop {
+	// 	min-height: 1024px;
+	// }
 }

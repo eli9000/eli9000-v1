@@ -2,7 +2,7 @@
 /* eslint jsx-a11y/img-has-alt: 0 */
 
 import React, { Component } from 'react';
-// import Axios from 'axios';
+import Axios from 'axios';
 // import Express from 'express';
 // import mailgun from 'mailgun-js';
 
@@ -25,8 +25,8 @@ class Contact extends Component {
 
 		this.state = {
 			email: 'eli9000@gmail.com',
-			subject: 'Test Subject',
-			content: 'Test body content.',
+			subject: 'Test',
+			content: 'Test content',
 		}
 
 	}
@@ -45,6 +45,30 @@ class Contact extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+
+		const user = 'sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org';
+		const email = this.state.email;
+		const subject = this.state.subject;
+		const content = this.state.content;
+
+		Axios({
+			method: 'post',
+			domain: user,
+			baseURL: 'https://api.mailgun.net/v3/sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org',
+			api_key: 'key-c3f9c798b3087d00bf5276977c12fa7f',
+			auth: {
+				username: 'postmaster@sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org',
+				password: '462cef47a73e9361c41c9a690d0d8edc',
+			},
+			data: {
+				from: email,
+				to: 'Eli <mailgun@mail.eli9000.com>',
+				subject: subject,
+				text: content,
+			}
+		});
+		// .then()
+
 
 		// this.setState({
 		// 	email: '',

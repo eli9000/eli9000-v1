@@ -21,9 +21,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header>
-					<Header />
-				</header>
+				<Header />
 				{this.props.children}
 				<footer>
 					<Footer />

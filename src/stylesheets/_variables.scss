@@ -14,8 +14,6 @@ $font-size:							14pt; // (reset)
 $text-large:						40px;
 $text-huge:							60px;
 
-$font-constitution:			"US Constitution", Times, serif;
-
 
 // ******************************** Colors:
 $primary: 							#5C5D8D;
@@ -87,13 +85,22 @@ $desktop-width: 1024px;
 *******************************************************************************/
 
 @mixin component-main {
+	flex: 1;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
 	color: $primary;
 	height: 100%;
 	width: 100%;
 	padding-top: 4em;
 	font-family: Courier New, Courier, monospace;
-	@include phone {
-		color: blue;
+	box-sizing: border-box;
+	background-color: #EFF4ED;
+	@include tablet {
+		width: 80%;
+	}
+	@include desktop {
+		width: 60%;
 	}
 }
 

@@ -18,14 +18,14 @@
 		.about-content {
 			width: 90%;
 
+			h2 {
+				margin-bottom: 10px;
+				text-decoration: underline;
+			}
+
 			p {
 				// line-height: 140%;
 				// font-size: 120%;
-
-				h2 {
-					margin-bottom: 10px;
-					text-decoration: underline;
-				}
 			}
 		}
 	}

@@ -35,7 +35,7 @@ class Home extends Component {
 				<div className="home-body">
 					<div className="home-content">
 
-						{/*<h1>Welcome!</h1>*/}
+						<h1>Welcome!</h1>
 						<p>
 							Thanks for checking out my website. Built from scratch using React JS,
 							Sassy CSS, Flexbox, and NPM.
@@ -52,11 +52,9 @@ class Home extends Component {
 						</p>
 					</div>
 
-					{/*<div className="home-pic">
-						<div className="home-pic-actual">
-							<img src="/png/matix.png" alt="Solo yo" />
-						</div>
-					</div>*/}
+					<div className="home-pic">
+						<img src="/png/matix.png" alt="Solo yo" />
+					</div>
 				</div>
 			</div>
 		);
