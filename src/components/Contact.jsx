@@ -3,32 +3,25 @@
 
 import React, { Component } from 'react';
 import Axios from 'axios';
-// import Express from 'express';
-// import mailgun from 'mailgun-js';
 
-// import '../api/apiKey.json';
+// import '../api/server.js';
 
 class Contact extends Component {
 	constructor(props) {
 		super(props);
 
 		this.handleEmailChange = this.handleEmailChange.bind(this);
-		this.handleContentChange = this.handleContentChange.bind(this);
+		this.handleTextChange = this.handleTextChange.bind(this);
 		this.handleSubjectChange = this.handleSubjectChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-
-		// this.state = {
-		// 	email: '',
-		// 	subject: '',
-		// 	content: '',
-		// }
+		this.sendMail = this.postMail.bind(this);
 
 		this.state = {
+			data: {},
 			email: 'eli9000@gmail.com',
 			subject: 'Test',
-			content: 'Test content',
+			text: 'Test text',
 		}
-
 	}
 
 	handleEmailChange(e) {
@@ -39,42 +32,12 @@ class Contact extends Component {
 		this.setState({ subject: e.target.value });
 	}
 
-	handleContentChange(e) {
-		this.setState({ content: e.target.value });
+	handleTextChange(e) {
+		this.setState({ text: e.target.value });
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-
-		const user = 'sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org';
-		const email = this.state.email;
-		const subject = this.state.subject;
-		const content = this.state.content;
-
-		Axios({
-			method: 'post',
-			domain: user,
-			baseURL: 'https://api.mailgun.net/v3/sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org',
-			api_key: 'key-c3f9c798b3087d00bf5276977c12fa7f',
-			auth: {
-				username: 'postmaster@sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org',
-				password: '462cef47a73e9361c41c9a690d0d8edc',
-			},
-			data: {
-				from: email,
-				to: 'Eli <mailgun@mail.eli9000.com>',
-				subject: subject,
-				text: content,
-			}
-		});
-		// .then()
-
-
-		// this.setState({
-		// 	email: '',
-		// 	subject: '',
-		// 	content: '',
-		// });
 	}
 
 	render() {
@@ -114,22 +77,42 @@ class Contact extends Component {
 							<label>
 								<h2>Nice message:</h2>
 								<textarea
-									name="content"
-									id="content"
+									name="text"
+									id="text"
 									type="text"
 									placeholder="**NOTE** this feature is NOT working... Please click on email icon to send message. THANKS!"
-									value={this.state.content}
-									onChange={this.handleContentChange} />
+									value={this.state.text}
+									onChange={this.handleTextChange} />
 							</label>
 							<br />
 							<br />
-							<input type="submit" value="Submit" />
+							<input type="submit" value="Submit" onClick={this.sendMail} />
 						</form>
 					</div>
 				</div>
 			</div>
 		);
 	}
+
+	postMail = () => {
+
+		const endpoint = `https://api.mailgun.net/v3/sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org/log`;
+
+		Axios.get(endpoint, {
+			headers: {
+				'content-type': 'application/json',
+				'authorization': 'Basic YXBpOmtleS1jM2Y5Yzc5OGIzMDg3ZDAwYmY1Mjc2OTc3YzEyZmE3Zg==',
+				'access-control-allow-origin': 'http://localhost:3000/contact'
+			}
+		})
+			.then(({ data }) => {
+				this.setState({ ...data, loading: false });
+				console.log({ ...data });
+			})
+			.catch((err) => console.warn('ERROR:\n', err));
+	}
 }
+
+
 
 export default Contact;

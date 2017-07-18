@@ -7,7 +7,7 @@
 		"build-css": "node-sass src/ -o src/",
 		"watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
 		"start-js": "react-scripts start",
-		"start:server": "nodemon --inspect api",
+		"start:server": "nodemon --inspect api/server.js",
 		"start": "npm-run-all -p watch-css start-js start:server",
 		"build": "npm run build-css && react-scripts build",
 		"predeploy": "npm run build",
@@ -25,11 +25,13 @@
 		"gh-pages": "^1.0.0",
 		"lodash": "^4.17.4",
 		"mailgun-js": "^0.11.2",
+		"pac-resolver": "^3.0.0",
 		"react": "^15.5.4",
 		"react-dom": "^15.5.4",
 		"react-router-dom": "^4.1.1",
 		"request": "^2.81.0",
-		"request-promise": "^4.2.1"
+		"request-promise": "^4.2.1",
+		"socks-proxy-agent": "^3.0.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
