@@ -2,42 +2,57 @@
 /* eslint jsx-a11y/img-has-alt: 0 */
 
 import React, { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
-// import '../api/server.js';
 
 class Contact extends Component {
 	constructor(props) {
 		super(props);
 
-		this.handleEmailChange = this.handleEmailChange.bind(this);
-		this.handleTextChange = this.handleTextChange.bind(this);
-		this.handleSubjectChange = this.handleSubjectChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.sendMail = this.postMail.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 
 		this.state = {
-			data: {},
-			email: 'eli9000@gmail.com',
-			subject: 'Test',
-			text: 'Test text',
+			from: '',
+			subject: '',
+			text: '',
 		}
 	}
 
-	handleEmailChange(e) {
-		this.setState({ email: e.target.value });
+	handleChange(event) {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+
+		this.setState({ [name]: value });;
 	}
 
-	handleSubjectChange(e) {
-		this.setState({ subject: e.target.value });
-	}
+	handleSubmit(event) {
+		event.preventDefault();
 
-	handleTextChange(e) {
-		this.setState({ text: e.target.value });
-	}
+		axios({
+			method: 'POST',
+			url: 'http://localhost:4000/messages',
+			data: {
+				to: 'eli9000@gmail.com',
+				from: this.state.from,
+				subject: this.state.subject,
+				text: this.state.text,
+			},
+			headers: {
+				'content-type': 'application/json',
+			}
+		})
+			.then((res) => {
+				console.log(res)
+			})
+			.then((err) => { console.log(err) });
 
-	handleSubmit(e) {
-		e.preventDefault();
+		this.setState({
+			from: '',
+			subject: '',
+			text: ''
+		});
 	}
 
 	render() {
@@ -53,12 +68,12 @@ class Contact extends Component {
 							<label>
 								<h2>Your eMail:</h2>
 								<input
-									name="email"
-									id="email"
+									name="from"
+									id="from"
 									type="email"
 									placeholder="user@example.com"
-									value={this.state.email}
-									onChange={this.handleEmailChange} />
+									value={this.state.from}
+									onChange={this.handleChange} />
 							</label>
 							<br />
 							<br />
@@ -68,51 +83,32 @@ class Contact extends Component {
 									name="subject"
 									id="subject"
 									type="text"
-									placeholder="Improvements you could make: Fix your contact form =P"
+									placeholder="Love? Hate? Suggestions?"
 									value={this.state.subject}
-									onChange={this.handleSubjectChange} />
+									onChange={this.handleChange} />
 							</label>
 							<br />
 							<br />
 							<label>
-								<h2>Nice message:</h2>
+								<h2>Lovely message goes here:</h2>
 								<textarea
 									name="text"
 									id="text"
 									type="text"
-									placeholder="**NOTE** this feature is NOT working... Please click on email icon to send message. THANKS!"
+									placeholder="IT'S ALLIIIIIIIVE!!! Feel free to send me a message!"
 									value={this.state.text}
-									onChange={this.handleTextChange} />
+									onChange={this.handleChange} />
 							</label>
 							<br />
 							<br />
-							<input type="submit" value="Submit" onClick={this.sendMail} />
+							<input type="submit" value="Submit" />
 						</form>
 					</div>
 				</div>
 			</div>
 		);
 	}
-
-	postMail = () => {
-
-		const endpoint = `https://api.mailgun.net/v3/sandbox261c7786ae084710884ccd91b724fbb6.mailgun.org/log`;
-
-		Axios.get(endpoint, {
-			headers: {
-				'content-type': 'application/json',
-				'authorization': 'Basic YXBpOmtleS1jM2Y5Yzc5OGIzMDg3ZDAwYmY1Mjc2OTc3YzEyZmE3Zg==',
-				'access-control-allow-origin': 'http://localhost:3000/contact'
-			}
-		})
-			.then(({ data }) => {
-				this.setState({ ...data, loading: false });
-				console.log({ ...data });
-			})
-			.catch((err) => console.warn('ERROR:\n', err));
-	}
 }
-
 
 
 export default Contact;

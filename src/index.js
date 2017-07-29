@@ -2,7 +2,6 @@
 
 // Libs
 import ReactDOM from 'react-dom';
-// import '../api/server.js';
 
 // CSS
 import './index.css';

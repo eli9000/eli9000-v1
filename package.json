@@ -6,9 +6,9 @@
 	"scripts": {
 		"build-css": "node-sass src/ -o src/",
 		"watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-		"start-js": "react-scripts start",
-		"start:server": "nodemon --inspect api/server.js",
-		"start": "npm-run-all -p watch-css start-js start:server",
+		"start:client": "react-scripts start",
+		"start:server": "nodemon --inspect server --exec babel-node --watch server",
+		"start": "source src/env.sh && npm-run-all -p start:client start:server",
 		"build": "npm run build-css && react-scripts build",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
@@ -21,6 +21,8 @@
 	},
 	"dependencies": {
 		"axios": "^0.16.1",
+		"body-parser": "^1.17.2",
+		"cors": "^2.8.4",
 		"express": "^4.15.3",
 		"gh-pages": "^1.0.0",
 		"lodash": "^4.17.4",

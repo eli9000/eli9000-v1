@@ -3,18 +3,12 @@
 
 //Libs
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// import '../api/server.js';
 
 //CSS Styles
 import './App.css';
 
 // Components
 import Header from './components/Header.jsx';
-// import Home from './components/Home.jsx';
-// import About from './components/About.jsx';
-// import Starwars from './components/Starwars.jsx';
 import Footer from './components/Footer.jsx';
 
 
