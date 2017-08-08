@@ -45,4 +45,4 @@ app.post('/messages', (req, res, next) => {
 	});
 });
 
-app.listen(4000, () => console.log('SERVER: is running!'));
+app.listen(4000, () => console.log('SERVER: is running!!'));

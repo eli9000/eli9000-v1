@@ -1,11 +1,11 @@
-@import "./stylesheets/_variables.scss";
+@import "./styles/_variables.scss";
 
-@import "./stylesheets/header.scss";
-@import "./stylesheets/home.scss";
-@import "./stylesheets/about.scss";
-@import "./stylesheets/projects.scss";
-@import "./stylesheets/contact.scss";
-@import "./stylesheets/footer.scss";
+@import "./styles/header.scss";
+@import "./styles/home.scss";
+@import "./styles/about.scss";
+@import "./styles/projects.scss";
+@import "./styles/contact.scss";
+@import "./styles/footer.scss";
 
 // * {
 // 	box-sizing: border-box;
@@ -21,7 +21,8 @@ h1, h2, h3, h4 {
 	flex-direction: column;
 	justify-content: space-between;
 	align-content: center;
-	background-color: #fff;
+	// background-color: $primary;
+	background-color: $primary;
 	min-height: 100vh;
 	// box-sizing: border-box;
 	// @include phone {
