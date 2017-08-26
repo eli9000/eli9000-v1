@@ -1,0 +1,13 @@
+.Starwars {
+  color: white;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center; }
+  .Starwars .button {
+    align-self: center;
+    width: auto; }
+  .Starwars li {
+    align-self: flex-start;
+    list-style-type: circle; }

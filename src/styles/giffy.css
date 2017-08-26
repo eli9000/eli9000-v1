@@ -1,0 +1,16 @@
+.Giffy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .Giffy .gif {
+    align-self: center;
+    text-align: center; }
+  .Giffy #gifDiv {
+    height: 200px;
+    width: 200px;
+    border: 2px solid; }
+    .Giffy #gifDiv img {
+      padding-top: 5px;
+      height: 190px;
+      width: 190px; }

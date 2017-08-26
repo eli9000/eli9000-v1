@@ -1,0 +1,59 @@
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+															MEDIA QUERIES
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.About {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: #5C5D8D;
+  height: 100%;
+  width: 100%;
+  padding-top: 4em;
+  font-family: Courier New, Courier, monospace;
+  box-sizing: border-box;
+  background-color: #EFF4ED; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .About {
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .About {
+      width: 60%; } }
+  .About .about-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #BBE868;
+    margin-bottom: 1em;
+    width: 100%; }
+    .About .about-head h1 {
+      text-align: center;
+      padding: .5em 0;
+      font-size: 2em;
+      letter-spacing: 5px;
+      color: #EFF4ED;
+      text-shadow: 2px 2px #5C5D8D; }
+  .About .about-body {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .About .about-body .about-content {
+      width: 90%; }
+      .About .about-body .about-content h2 {
+        margin-bottom: 10px;
+        text-decoration: underline; }

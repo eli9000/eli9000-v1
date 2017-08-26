@@ -2,23 +2,26 @@ var express = require('express');
 var cors = require('cors');
 var mailgun = require('mailgun-js');
 var bodyParser = require('body-parser');
+var path = require('path');
 var app = express();
 
 const apiKey = process.env.MAILGUN_API_KEY || '';
 const domain = process.env.MAILGUN_DOMAIN || '';
+const { ROOT_DOMAIN, PORT } = process.env;
 
 // Predefined 'options' for Mailgun API
 let options = {
 	apiKey,
 	domain,
 	retry: 2,
-	auth: {
-		username: 'api',
-		password: 'apiKey'
-	}
 };
 
-app.use('*', cors({ origin: 'http://localhost:3000' }));
+app.use('*', cors({ origin: 'https://eli9000.com' }));
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, '..', 'build')));
+}
+
 app.use('/messages', bodyParser.json());
 
 app.post('/messages', (req, res, next) => {
@@ -45,4 +48,13 @@ app.post('/messages', (req, res, next) => {
 	});
 });
 
-app.listen(4000, () => console.log('SERVER: is running!!'));
+app.get('*', (req, res, next) => {
+	// if (process.env.NODE_ENV === 'production'
+	// 	&& req.headers['x-forwarded-proto'] !== 'https') {
+	// 	return res.redirect(`https://${req.hostname}${req.url}`);
+	// }
+	res.sendFile(path.resolve(__dirname, '..', 'public/index.html'));
+	return next();
+});
+
+app.listen(PORT, '192.30.252.153');

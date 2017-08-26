@@ -2,13 +2,14 @@
 	"name": "eli9000",
 	"version": "0.1.0",
 	"homepage": "https://eli9000.github.io",
+	"proxy": "http://localhost:3001",
 	"private": true,
 	"scripts": {
 		"build-css": "node-sass-chokidar src -o src",
 		"watch-css": "npm run build-css && node-sass-chokidar src -o src --watch --recursive",
 		"start:client": "react-scripts start",
-		"start:server": "nodemon server --watch server --exec babel-node",
-		"start": "source src/env.sh && npm-run-all -p start:client start:server watch-css",
+		"start:server": "source env.sh && nodemon server --watch server --exec babel-node",
+		"start": "npm-run-all -p start:client start:server watch-css",
 		"build": "npm run build-css && react-scripts build",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
@@ -49,6 +50,6 @@
 		"node-sass-chokidar": "0.0.3",
 		"nodemon": "^1.11.0",
 		"npm-run-all": "^4.0.2",
-		"react-scripts": "0.9.5"
+		"react-scripts": "^1.0.11"
 	}
 }

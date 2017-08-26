@@ -4,26 +4,8 @@
 //Libs
 import React, { Component } from 'react';
 
-//Components
-// import Giffy from './Giffy.jsx';
-
-//CSS Styles
-
 //Home Component Code
 class Home extends Component {
-	constructor() {
-		super();
-
-		this.onClick = this.toggleDialog.bind(this);
-
-		this.state = {
-			show: false,
-		};
-	}
-
-	toggleDialog() {
-		this.setState(({ show }) => ({ show: !show }));
-	}
 
 	render() {
 		return (
@@ -40,7 +22,7 @@ class Home extends Component {
 							Thanks for checking out my website. Built from scratch using React JS,
 							Sassy CSS, Flexbox, and NPM.
 						</p>
-						<img src="/gifs/uc-rotate.gif" />
+						<img src="/gifs/uc-rotate.gif" alt="Under contruction gif" />
 						<p>
 							Had to include the ubiquitous 'Under Construction' gif, strictly for nostalgic
 							purposes. Reminds me of the good ol' Geocities days.

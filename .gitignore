@@ -25,6 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 notes.md
 aboutMe.json
+resume.json
 
 src/components/lib/Slideshow.jsx
 

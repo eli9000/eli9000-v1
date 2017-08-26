@@ -1,0 +1,72 @@
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+															MEDIA QUERIES
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Home {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: #5C5D8D;
+  height: 100%;
+  width: 100%;
+  padding-top: 4em;
+  font-family: Courier New, Courier, monospace;
+  box-sizing: border-box;
+  background-color: #EFF4ED; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .Home {
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .Home {
+      width: 60%; } }
+  .Home .home-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #BBE868;
+    margin-bottom: 1em;
+    width: 100%; }
+    .Home .home-head h1 {
+      text-align: center;
+      padding: .5em 0;
+      font-size: 2em;
+      letter-spacing: 5px;
+      color: #EFF4ED;
+      text-shadow: 2px 2px #5C5D8D;
+      background-image: url("/png/shaka-sign.png");
+      background-size: 3em 3em;
+      background-origin: border-box;
+      background-position: right top;
+      background-repeat: no-repeat;
+      animation-name: shaka;
+      animation-duration: 3s; }
+  .Home .home-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+    .Home .home-body .home-content {
+      width: 90%; }
+      .Home .home-body .home-content img {
+        max-width: 300px;
+        display: block;
+        margin: auto; }
+    .Home .home-body .home-pic img {
+      z-index: -1000;
+      opacity: 0.9;
+      border-radius: 10%; }

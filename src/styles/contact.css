@@ -1,0 +1,84 @@
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+															MEDIA QUERIES
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Contact {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: #5C5D8D;
+  height: 100%;
+  width: 100%;
+  padding-top: 4em;
+  font-family: Courier New, Courier, monospace;
+  box-sizing: border-box;
+  background-color: #EFF4ED; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .Contact {
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .Contact {
+      width: 60%; } }
+  .Contact .contact-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #BBE868;
+    margin-bottom: 1em;
+    width: 100%; }
+    .Contact .contact-head h1 {
+      text-align: center;
+      padding: .5em 0;
+      font-size: 2em;
+      letter-spacing: 5px;
+      color: #EFF4ED;
+      text-shadow: 2px 2px #5C5D8D; }
+  .Contact .contact-body {
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    .Contact .contact-body .contact-form {
+      width: 90%;
+      padding-right: 1em; }
+    .Contact .contact-body #from, .Contact .contact-body #subject, .Contact .contact-body #text {
+      width: 100%;
+      padding: 10px 0px 10px 15px;
+      font-size: 1em;
+      border: 2px solid #BBE868;
+      background-color: lightgray;
+      color: #5C5D8D;
+      outline: none;
+      box-shadow: inset 2px 2px 2px #5C5D8D; }
+    .Contact .contact-body #text {
+      height: 9em;
+      resize: none; }
+    .Contact .contact-body input[type=submit] {
+      background-color: #99A1A6;
+      padding: 10px 40px;
+      font-size: 1em;
+      color: #5C5D8D;
+      outline: none;
+      border: 2px solid #BBE868;
+      border-radius: 7px;
+      box-shadow: 3px 3px 3px #5C5D8D; }
+    .Contact .contact-body input[type=submit]:hover {
+      box-shadow: none;
+      color: #fff;
+      border: 2px solid #fff;
+      background-color: #BBE868;
+      text-shadow: 1px 1px #444444; }

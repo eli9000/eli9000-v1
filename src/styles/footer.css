@@ -1,0 +1,60 @@
+/*******************************************************************************
+																	STYLING
+*******************************************************************************/
+/*******************************************************************************
+															MEDIA QUERIES
+*******************************************************************************/
+/*******************************************************************************
+																	MIXINS
+*******************************************************************************/
+@keyframes shaka {
+  from {
+    background-position: left top;
+    background-image: url("/png/shaka-sign.png"); }
+  to {
+    background-position: right top;
+    background-image: url("/png/shaka-sign.png"); } }
+
+.Footer {
+  height: auto;
+  background-color: #444444;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center; }
+  .Footer .copyright {
+    color: #CCE2A3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center; }
+    .Footer .copyright h2 {
+      letter-spacing: 4px;
+      margin: 10px 0; }
+    .Footer .copyright p {
+      margin: 0 0 10px 0;
+      font-size: 0.7em;
+      letter-spacing: 2px; }
+  .Footer .links {
+    width: 100%; }
+    .Footer .links ul {
+      margin: 0px;
+      padding-left: 0px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style-type: none; }
+      .Footer .links ul li a:link, .Footer .links ul li a:visited {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 4px;
+        height: 25px;
+        width: 25px;
+        border: 3px solid #99A1A6;
+        border-radius: 25px;
+        box-shadow: 7px 5px 5px #5C5D8D; }
+      .Footer .links ul li a:hover {
+        box-shadow: 0px 0px 0px #444444;
+        border: 3px solid white; }

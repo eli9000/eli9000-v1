@@ -13,9 +13,9 @@ class Contact extends Component {
 		this.handleChange = this.handleChange.bind(this);
 
 		this.state = {
-			from: '',
-			subject: '',
-			text: '',
+			from: 'testy_mctest@tester.com',
+			subject: 'Just testing meow',
+			text: 'Production server is not being nice...',
 		}
 	}
 
@@ -31,10 +31,11 @@ class Contact extends Component {
 		event.preventDefault();
 
 		axios({
-			method: 'POST',
-			url: 'http://localhost:4000/messages',
+			method: 'post',
+			url: '/messages',
+			responseType: 'json',
 			data: {
-				to: 'eli9000@gmail.com',
+				to: 'eli9000@icloud.com',
 				from: this.state.from,
 				subject: this.state.subject,
 				text: this.state.text,
@@ -44,15 +45,15 @@ class Contact extends Component {
 			}
 		})
 			.then((res) => {
-				console.log(res)
+				console.log(res);
 			})
 			.then((err) => { console.log(err) });
 
-		this.setState({
-			from: '',
-			subject: '',
-			text: ''
-		});
+		// this.setState({
+		// 	from: '',
+		// 	subject: '',
+		// 	text: ''
+		// });
 	}
 
 	render() {
@@ -64,14 +65,13 @@ class Contact extends Component {
 				<div className="contact-body">
 					{/*<h1>Welcome!</h1>*/}
 					<div className="contact-form">
-						<form method="POST" onSubmit={this.handleSubmit}>
+						<form onSubmit={this.handleSubmit}>
 							<label>
 								<h2>Your eMail:</h2>
 								<input
 									name="from"
 									id="from"
 									type="email"
-									placeholder="user@example.com"
 									value={this.state.from}
 									onChange={this.handleChange} />
 							</label>
@@ -83,7 +83,6 @@ class Contact extends Component {
 									name="subject"
 									id="subject"
 									type="text"
-									placeholder="Love? Hate? Suggestions?"
 									value={this.state.subject}
 									onChange={this.handleChange} />
 							</label>
@@ -95,7 +94,6 @@ class Contact extends Component {
 									name="text"
 									id="text"
 									type="text"
-									placeholder="IT'S ALLIIIIIIIVE!!! Feel free to send me a message!"
 									value={this.state.text}
 									onChange={this.handleChange} />
 							</label>
